@@ -1,0 +1,9 @@
+<h1>Hi, Wellcome to DATASET mode</h1>
+
+<p>Por favor, selecciona el dataset a cargar</p>
+<form action="/data_viz" method="post">
+    <% datasets.forEach((item) => { %>
+        <input type="radio" name="nivel" value="<%= item%>" required><%= item%><br>
+    <% }) %>
+    <button type="submit">Visualizar!</button>
+</form>

@@ -13,7 +13,7 @@ function initialize(passport, getUserByEmail, getUserById) {
         /* Se obtiene usuario por email */
         const user = getUserByEmail(email);
         if (user == null) {
-            return done(null, false, { message: 'No existe el usuario con sicho email' });
+            return done(null, false, { message: 'No existe el usuario con dicho email' });
         }
         /* En caso de que si exista */
         try {

@@ -1,4 +1,11 @@
 <h1>Hi <%= name %></h1>
+<h1>Seleccione modo operación</h1>
+<form action="/dataset" method="post">
+    <button type="submit">Modo Dataset</button>
+</form>
+<form action="/consulta" method="post">
+    <button type="submit">Modo Consulta</button>
+</form>
 <form action="/logout?_method=DELETE" method="post">
     <button type="submit">Logout</button>
 </form>
