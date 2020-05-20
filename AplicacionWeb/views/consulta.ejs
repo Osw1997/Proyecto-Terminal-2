@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <style>
     /* The alert message box */
     .alert {
@@ -35,34 +36,105 @@
     textarea {
         resize: none;
     }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+    }
+    th {
+      text-align: left;
+    }
+    <!-- Para dividir la pagina en 2 -->
+    .leftside, .rightside {
+      height:100vh;
+      width:100%;
+    }
+    .leftside {
+      background:red;
+    }
+    .rightside {
+      background:blue;
+    }
+
 </style>
 
-<h1>Hi, Wellcome to Consulta mode</h1>
+  <h1>Hola, bienvenido a modo consulta</h1>
 
-    <% if (ok) { %>
-    <form action="/data_viz" method="post">
+  <div class="row">
+    <div class="col">
+      <div class="leftside">
+        <% if (ok) { %>
+          <form action="/data_viz" method="post">
             <div class="success">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                <%= msg %>
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              <%= msg %>
             </div>
             <textarea id="consulta" rows="10" cols="50" autofocus placeholder="Here goes your query" name="consulta" disabled><%= text_box %></textarea>
             <br>
-            <textarea id="consulta" rows="10" cols="50" autofocus placeholder="Here goes your query" name="resultado" readonly="true"><%= results %></textarea>
+            <textarea id="resultados_json" rows="10" cols="50" autofocus placeholder="---" name="resultado" readonly="true"><%= results %></textarea>
             <br>
             <button type="submit" disabled>Subir consulta</button>
             <button type="submit">Visualizar datos</button>
-    </form>
-    <% } else { %>
-        <% if (msg.length) { %>
-            <div class="alert">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                <%= msg %>
+
+            <h1> Resultados </h1>
+            <div id="resultados_id">
             </div>
-        <% } %>
-        <form action="/check_query" method="post">
+          </form>
+        <% } else { %>
+          <% if (msg.length) { %>
+            <div class="alert">
+              <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+              <%= msg %>
+            </div>
+          <% } %>
+          <form action="/check_query" method="post">
+            <input id="proveniencia" name="proveniencia" type="hidden" value="consulta">
             <textarea id="consulta" rows="10" cols="50" autofocus placeholder="Here goes your query" name="consulta" required><%= text_box %></textarea>
             <br>
             <button type="submit">Subir consulta</button>
             <button type="submit" disabled>Visualizar datos</button>
+          </form>
+          <% } %>
+
+        <br>
+        <form class="" action="/geoFederated" method="GET">
+          Top Feature: GeoSPARQL & Federated Queries
+          <button type="submit" name="geoFederated">geoFederated!</button>
         </form>
-    <% } %>
+
+      </div>
+
+    </div>
+
+    <div class="rightside">
+      'Joder, buentas tardes'
+    </div>
+  </div>
+
+
+
+<script>
+  json_ = JSON.parse(document.getElementById('resultados_json').innerHTML);
+  head = json_["head"]["vars"];
+  head_lenght = head.length;
+
+  html = '<table style=\"width:100%\">';
+  for (column of head) {
+    html += '<th>' + column + '</th>'
+  }
+  html += '</tr>';
+  // Se llenan con columnas
+  content = json_['results']['bindings'];
+  for (n in content) {
+    html += '<tr>';
+    for (column of head) {
+      html += '<td>' + content[n][column].value + '</td>';
+    }
+    html += '</tr>';
+  }
+  html += '</table>';
+  document.getElementById('resultados_id').innerHTML = html;
+</script>

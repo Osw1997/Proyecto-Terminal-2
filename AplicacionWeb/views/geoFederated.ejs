@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>geoFederated</title>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <form class="" action="/consultaGeoFed" method="GET">
+      <div class="container-lg border p-3 my-3 bg-dark text-white">
+        <h2>Bienvenido a GeoSPARQL Federated Queries</h2>
+        <h3 class="">La metodología es la siguiente:</h3>
+        <h4>
+          <ol>
+            <li>Consultar los SPARQL endpoints remotos necesarios.</li>
+            <li>Corroborar los resultados antes de ser cargados a los grafos, se te dará la opción de visualizar los datos en caso de que su formato lo permita</li>
+            <li>Asignar el nombre del grafo, el cual debe de ser único</li>
+            <li>La herramienta cargará los datos al LDP Apachr Marmotta y estarán disponibles para que uses las funciones GeoSPARQL</li>
+            <li>Los resultados de tu consulta se visualizarán en tabla y en caso de que el formato de los datos lo permita, los podrás visualizar en la herramienta</li>
+          </ol>
+        </h4>
+      </div>
+      <button class="button" type="submit" name="button" autofocus>¡Empezar!</button>
+    </form>
+  </body>
+</html>

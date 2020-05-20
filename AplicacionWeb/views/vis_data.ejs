@@ -5,6 +5,9 @@
     }
 </style>
 
-<h1>Hi, Wellcome to Visualizacion window</h1>
+<h1>Hola, bienvenido a modo visualización</h1>
 <br>
-<textarea id="consulta" rows="10" cols="50" autofocus placeholder="Here goes your query" name="resultado" readonly="true"><%= resultados %></textarea>
+<textarea id="resultados_json" rows="10" cols="50" autofocus placeholder="Here goes your query" name="resultado" readonly="true"><%= resultados %></textarea>
+<script>
+  json_ = JSON.parse(document.getElementById('resultados_json').innerHTML);
+</script>

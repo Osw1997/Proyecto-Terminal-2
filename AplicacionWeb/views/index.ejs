@@ -6,6 +6,16 @@
 <form action="/consulta" method="post">
     <button type="submit">Modo Consulta</button>
 </form>
+<form action="/geoFederated" method="get">
+    <button type="submit" autofocus>Consulta federada geoespacial</button>
+</form>
+
+<% if (tipo_usuario == 1) {%>
+  <form action="/register" method="get">
+      <button type="submit">Registrar</button>
+  </form>
+<%}%>
+
 <form action="/logout?_method=DELETE" method="post">
     <button type="submit">Logout</button>
 </form>

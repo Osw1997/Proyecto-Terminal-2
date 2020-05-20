@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <!-- Conversor de WKT a GeoJSON -->
+  <script src="Scripts/wkx.js" type='text/javascript'></script>
+
+  <style media="screen">
+    <!-- Para dividir la pagina en 2 -->
+    .leftside, .rightside {
+      height:100vh;
+      width:100%;
+    }
+    .leftside {
+      background:#f8f8ff;
+    }
+    .rightside {
+      background:white;
+    }
+  </style>
+
+  <body>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>25%</b></div>
+    </div>
+    <br>
+    <h1>Consulta Geoespacial Federada</h1>
+    <% if (ok) { %>
+      <div class="success">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <%= msg %>
+      </div>
+    <% } else { %>
+      <% if (msg.length) { %>
+        <div class="alert">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <%= msg %>
+        </div>
+      <% } %>
+    <% } %>
+    <div class="row">
+      <div class="col">
+        <div class="leftside">
+          <form class="" action="/check_query" method="post">
+            <div class="input-group">
+              <textarea class="form-control" aria-label="With textarea" style="height: 400px" name="consulta" id="consulta" autofocus required><%= text_box %></textarea>
+              <input id="proveniencia" name="proveniencia" type="hidden" value="geoFederated">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><button type="submit" name="button">Consultar</button></span>
+              </div>
+            </div>
+          </form>
+
+
+          <h1> Resultados </h1>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalResultados">
+            Ver resultados
+          </button>
+          <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalGrafo">
+            Insertar grafo
+          </button>
+          <!-- Modal que muestra los resultados en sus diferentes opciones -->
+          <div class="container p-3 my-3 border">
+            <div class="modal fade" id="modalResultados" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputVisualizacion">Ver datos</label>
+                      </div>
+                      <select class="custom-select" id="inputVisualizacion">
+                        <!-- <option selected>Choose...</option> -->
+                        <option value="resultados_json" selected>JSON</option>
+                        <option value="resultados_tabla">Tabla</option>
+                        <option value="json_tabla">JSON y Tabla</option>
+                        <option value="resultados_mapa">Mapa</option>
+                      </select>
+                    </div>
+                    <div class="container p-3 my-3 border">
+                      <!--  -->
+                      <textarea id="resultados_json" rows="10" cols="50" autofocus placeholder="---" name="resultado" readonly="true"><%= results %></textarea>
+                      <!--  -->
+                      <div style="display: none" class="overflow-auto" id="resultados_tabla"></div>
+                      <!--  -->
+                      <div style="display: none" class="overflow-auto" id="resultados_mapa"></div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Listo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal que pregunta cómo se insertará el grafo -->
+          <div class="container p-3 my-3 border">
+            <div class="modal fade" id="modalGrafo" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Inserción datos a grafo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>Si señor :)</h2>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Listo</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col">
+        <div class="rightside">
+          <div class="row">
+            <div class="col-3">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">LinkedGeoData</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Prophox</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Wikidata</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Otro</a>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">About</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Servicio</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Prefijos</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Este es la sección de LinkedGeoData</div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      Usa la siguiente URL en la consulta federada
+                      <p><abbr title="Servicio">http://linkedgeodata.org/sparql</abbr></p>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Atributos Prophox</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Atributos Wikidata</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Atributos Otro</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <script>
+    json_ = JSON.parse(document.getElementById('resultados_json').innerHTML);
+    head = json_["head"]["vars"];
+    // variable que contiene los nombres de las columnas
+    head_lenght = head.length;
+    // Variable que contiene el contenido del JSON
+    content = json_['results']['bindings'];
+    // La siguiente variable guarda los resultados de verificar que el JSON
+    // retornado por Marmotta si contiene información geoespacial.
+    geoFlag = buscaGeoWKT(json_);
+    console.log(geoFlag);
+
+    html = '<table class="table table-striped" style=\"width:100%\">';
+    html += '<thead class="thead-dark">';
+    for (column of head) {
+      html += '<th>' + column + '</th>'
+    }
+    html += '</tr></thead>';
+    // Se llenan con columnas
+    for (n in content) {
+      html += '<tr>';
+        for (column of head) {
+          html += '<td>' + content[n][column].value + '</td>';
+        }
+        html += '</tr>';
+    }
+    html += '</table>';
+    document.getElementById('resultados_tabla').innerHTML = html;
+
+    // Se analiza la seleccion de visualizacion
+    previo = 'resultados_json';
+    $('#inputVisualizacion').change(function(){
+      var value = $(this).val();
+      console.log('Input visulazación: ' + value);
+      // Se oculta el anterior, muestra el indicado y se actualiza el previo.
+      // Ocultar
+      if (previo == 'json_tabla') {
+        document.getElementById('resultados_json').style.display = 'none';
+        document.getElementById('resultados_tabla').style.display = 'none';
+      } else {
+        document.getElementById(previo).style.display = 'none';
+      }
+      // Mostrar
+      if (value == 'json_tabla') {
+        document.getElementById('resultados_json').style.display = 'block';
+        document.getElementById('resultados_tabla').style.display = 'block';
+      } else {
+        document.getElementById(value).style.display = 'block';
+      }
+      previo = value;
+
+      // Si la opción de visualización fue mapa, se muestra el mapa.
+      if (value == 'resultados_mapa' && geoFlag.length > 0) {
+        // El siguiente arreglo contine todos los geojson
+        // para los datos que apliquen
+        var GeoJSON = WKT2GeoJSON(geoFlag, content);
+        console.log(GeoJSON)
+      }
+    });
+
+    function buscaGeoWKT(json) {
+      WKTDiccionario = ['POINT', 'LINESTRING', 'POLYGON', 'MULTIPOLYGON',
+                        'MULTIPOINT', 'MULTILINESTRING', 'GEOMETRYCOLLECTION'];
+      // geoCols = new Array(json['head']['vars'].length);
+      // geoCols.fill(false);
+      geoCols = []
+      columnas = json['head']['vars'];
+      valores = json['results']['bindings'];
+      // console.log(columnas);
+      for(columna of columnas) {
+        for(palabra of WKTDiccionario) {
+          if (valores[0][columna]['value'].toUpperCase().includes(palabra)) {
+            // geoCols[columnas.indexOf(columna)] = true;
+            geoCols.push(columna)
+          }
+        }
+      }
+      return geoCols;
+    }
+
+    function WKT2GeoJSON(geoFlag, contenido) {
+      // Se importa la libería que permite convertir WKT a GeoJSON
+      var wkx = require('wkx');
+      // Se crea un arreglo que contendrá los GeoJSON asociados a cada columna
+      var arrayGeoJson = new Array(geoFlag.length);
+      // Se crean los geojson
+      var m = 0;
+      for(columna of geoFlag) {
+        var tmp = []
+        for(n in contenido) {
+          wkt = contenido[n][columna]['value'];
+          wkt2json = wkx.Geometry.parse(wkt);
+          // jsonString = JSON.stringify(wkt2json.toGeoJSON());
+          // tmp.push(jsonString);
+          tmp.push(wkt2json.toGeoJSON());
+        }
+        arrayGeoJson[m] = tmp;
+        m = m + 1;
+      }
+      return arrayGeoJson;
+    }
+
+    // Para automatizar la extracción de URI
+    //x =RegExp('(?<=service) <(.*)>|(?<=service)<(.*)>').exec(t.toLowerCase())}
+
+  </script>
+
+</html>

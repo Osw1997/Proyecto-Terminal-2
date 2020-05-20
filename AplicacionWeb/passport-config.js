@@ -5,7 +5,16 @@
 /* Configuracion para passport */
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
+const mysql = require('mysql');
+// Se declaran las variables de conexión
+var coneccion = mysql.createConnection({
+  host: 'localhost',
+  user: 'user_pt2',
+  password: 'ProyectoTerminal2'
+});
 
+// Se indica que BD se utiliza
+coneccion.query('USE users_webapp');
 
 
 function initialize(passport, getUserByEmail, getUserById) {
