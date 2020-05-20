@@ -1,0 +1,226 @@
+oswaldo@OswaldoSpectre:~/Documents/marmotta/launchers/marmotta-webapp$ mvn tomcat7:run
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< org.apache.marmotta:marmotta-webapp >-----------------
+[INFO] Building Apache Marmotta Web Application 3.4.0
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] >>> tomcat7-maven-plugin:2.2:run (default-cli) > process-classes @ marmotta-webapp >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ marmotta-webapp ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ marmotta-webapp ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ marmotta-webapp ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- jrebel-maven-plugin:1.1.5:generate (generate-rebel-xml) @ marmotta-webapp ---
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.0.1:list (default) @ marmotta-webapp ---
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ marmotta-webapp ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< tomcat7-maven-plugin:2.2:run (default-cli) < process-classes @ marmotta-webapp <<<
+[INFO] 
+[INFO] 
+[INFO] --- tomcat7-maven-plugin:2.2:run (default-cli) @ marmotta-webapp ---
+[INFO] Running war on http://localhost:8080/
+[INFO] Using existing Tomcat server configuration at /home/oswaldo/Documents/marmotta/launchers/marmotta-webapp/target/tomcat
+[INFO] setting SystemProperties:
+[INFO]  marmotta.home=/tmp/marmotta
+[INFO] create webapp with contextPath: 
+Mar 07, 2020 6:18:21 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Mar 07, 2020 6:18:21 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Tomcat
+Mar 07, 2020 6:18:21 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.47
+18:18:24.382 INFO  - WELD-000900: 2.1.2 (Final)
+18:18:24.390 INFO  - JNDI: registering Apache Marmotta JNDI implementation ...
+18:18:24.595 INFO  - JNDI: initialising Apache Marmotta Context Factory ...
+18:18:24.597 INFO  - JNDI: creating Apache Marmotta Initial Context ...
+18:18:24.659 INFO  - WELD-000101: Transactional services not available. Injection of @Inject UserTransaction not available. Transactional observers will be invoked synchronously.
+18:18:25.568 INFO  - Tomcat 7+ detected, CDI injection will be available in Servlets and Filters. Injection into Listeners is not supported
+18:18:25.851 WARN  - WELD-001700: Interceptor annotation class javax.ejb.PostActivate not found, interception based on it is not enabled
+18:18:25.852 WARN  - WELD-001700: Interceptor annotation class javax.ejb.PrePassivate not found, interception based on it is not enabled
+18:18:26.171 INFO  - Apache Marmotta Core Version 3.4.0 starting up ... 
+18:18:26.171 INFO  - Build Information:
+18:18:26.171 INFO  -  - Build User: oswaldo
+18:18:26.171 INFO  -  - Build Host: OswaldoSpectre
+18:18:26.172 INFO  -  - Build Time: Mon, 19 Aug 2019 21:13:26 CDT
+18:18:26.172 INFO  -  - Build OS:   Linux 4.15.0-54-generic/amd64
+18:18:26.172 INFO  -  - Revision:   git:28c9b8
+18:18:26.176 INFO  - Configured working directory /tmp/marmotta from system property marmotta.home
+18:18:26.177 INFO  - Apache Marmotta Configuration Service starting up ...
+18:18:26.178 INFO  - Apache Marmotta running on Apache Tomcat 7.x
+18:18:26.178 INFO  - reading system configuration from existing configuration file /tmp/marmotta/system-config.properties
+18:18:26.186 INFO  - reading system configuration metadata from existing configuration file /tmp/marmotta/system-meta.properties
+18:18:26.231 INFO  - configuration successfully saved to /tmp/marmotta/system-config.properties
+18:18:26.232 INFO  - configuration successfully saved to /tmp/marmotta/system-meta.properties
+18:18:26.235 INFO  - Apache Marmotta Logging Service starting up ...
+18:18:26.330 INFO  - - configured logging modules: Caching, CDI/Weld, Configuration, KiWi Backend, KiWi Reasoner, LDCache, LDClient, LDP, LDPath, Linked Data, RestEasy, Security, Sesame, SPARQL, System, User
+18:18:26.332 INFO  - - configured logging appenders: Syslog (LOCAL0), Marmotta Main Log, Marmotta Security Log, Marmotta Debug Log, Marmotta Console
+18:18:26.333 WARN  - LOGGING: Switching to Apache Marmotta logging configuration; further output will be found in /tmp/marmotta/log/*.log
+18:18:26.664 WARN  - Apache Marmotta Core Version 3.4.0 has started up successfully!
+18:18:26.666 WARN  - You can access the system now at the URL http://OswaldoSpectre:0/
+Mar 07, 2020 6:18:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+18:18:39.686 WARN  - COMMIT: temporary conflict, retrying in 1082 ms ... (thread=http-bio-8080-exec-1, retry=0)
+18:18:40.769 WARN  - COMMIT: temporary conflict, retrying in 842 ms ... (thread=http-bio-8080-exec-1, retry=1)
+18:18:41.613 WARN  - COMMIT: temporary conflict, retrying in 753 ms ... (thread=http-bio-8080-exec-1, retry=2)
+18:18:42.367 WARN  - COMMIT: temporary conflict, retrying in 1031 ms ... (thread=http-bio-8080-exec-1, retry=3)
+18:18:43.399 WARN  - COMMIT: temporary conflict, retrying in 1141 ms ... (thread=http-bio-8080-exec-1, retry=4)
+18:18:44.542 WARN  - COMMIT: temporary conflict, retrying in 998 ms ... (thread=http-bio-8080-exec-1, retry=5)
+18:18:45.542 WARN  - COMMIT: temporary conflict, retrying in 753 ms ... (thread=http-bio-8080-exec-1, retry=6)
+18:18:46.296 WARN  - COMMIT: temporary conflict, retrying in 906 ms ... (thread=http-bio-8080-exec-1, retry=7)
+18:18:47.204 WARN  - COMMIT: temporary conflict, retrying in 967 ms ... (thread=http-bio-8080-exec-1, retry=8)
+18:18:48.172 WARN  - COMMIT: temporary conflict, retrying in 1025 ms ... (thread=http-bio-8080-exec-1, retry=9)
+18:18:49.199 ERROR - COMMIT: temporary conflict could not be solved! (error: Server versions prior to 8.0 do not support savepoints.)
+18:18:49.207 WARN  - Rolling back transaction due to connection close
+java.lang.Throwable: null
+	at org.openrdf.sail.helpers.SailConnectionBase.close(SailConnectionBase.java:245)
+	at org.openrdf.sail.helpers.SailConnectionWrapper.close(SailConnectionWrapper.java:88)
+	at org.openrdf.sail.helpers.SailConnectionWrapper.close(SailConnectionWrapper.java:88)
+	at org.openrdf.sail.helpers.SailConnectionWrapper.close(SailConnectionWrapper.java:88)
+	at org.openrdf.repository.sail.SailRepositoryConnection.close(SailRepositoryConnection.java:129)
+	at org.openrdf.repository.base.RepositoryConnectionWrapper.close(RepositoryConnectionWrapper.java:275)
+	at org.apache.marmotta.platform.core.services.triplestore.SesameServiceImpl$1.close(SesameServiceImpl.java:308)
+	at org.apache.marmotta.platform.ldp.webservices.LdpWebService.initialize(LdpWebService.java:151)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.injection.MethodInjectionPoint.invokeOnInstanceWithSpecialValue(MethodInjectionPoint.java:93)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:266)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:253)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:232)
+	at org.jboss.weld.event.ObserverNotifier.notifyObserver(ObserverNotifier.java:169)
+	at org.jboss.weld.event.ObserverNotifier.notifyObserver(ObserverNotifier.java:165)
+	at org.jboss.weld.event.ObserverNotifier.notifyObservers(ObserverNotifier.java:119)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:112)
+	at org.jboss.weld.event.EventImpl.fire(EventImpl.java:83)
+	at org.apache.marmotta.platform.core.startup.MarmottaStartupService.startupHost(MarmottaStartupService.java:244)
+	at org.apache.marmotta.platform.core.startup.MarmottaStartupService$Proxy$_$$_WeldClientProxy.startupHost(Unknown Source)
+	at org.apache.marmotta.platform.core.servlet.MarmottaPreStartupFilter.doFilter(MarmottaPreStartupFilter.java:99)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.thetransactioncompany.cors.CORSFilter.doFilter(CORSFilter.java:208)
+	at com.thetransactioncompany.cors.CORSFilter.doFilter(CORSFilter.java:274)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.marmotta.platform.core.servlet.MarmottaOptionsFilter.doFilter(MarmottaOptionsFilter.java:81)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+18:18:49.222 ERROR - Error creating LDP root container <http://localhost:8080/ldp>: org.openrdf.sail.SailException: database error while committing transaction
+org.openrdf.repository.RepositoryException: org.openrdf.sail.SailException: database error while committing transaction
+	at org.openrdf.repository.sail.SailRepositoryConnection.commit(SailRepositoryConnection.java:109)
+	at org.openrdf.repository.base.RepositoryConnectionWrapper.commit(RepositoryConnectionWrapper.java:282)
+	at org.apache.marmotta.platform.ldp.webservices.LdpWebService.initialize(LdpWebService.java:149)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jboss.weld.injection.MethodInjectionPoint.invokeOnInstanceWithSpecialValue(MethodInjectionPoint.java:93)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:266)
+	at org.jboss.weld.event.ObserverMethodImpl.sendEvent(ObserverMethodImpl.java:253)
+	at org.jboss.weld.event.ObserverMethodImpl.notify(ObserverMethodImpl.java:232)
+	at org.jboss.weld.event.ObserverNotifier.notifyObserver(ObserverNotifier.java:169)
+	at org.jboss.weld.event.ObserverNotifier.notifyObserver(ObserverNotifier.java:165)
+	at org.jboss.weld.event.ObserverNotifier.notifyObservers(ObserverNotifier.java:119)
+	at org.jboss.weld.event.ObserverNotifier.fireEvent(ObserverNotifier.java:112)
+	at org.jboss.weld.event.EventImpl.fire(EventImpl.java:83)
+	at org.apache.marmotta.platform.core.startup.MarmottaStartupService.startupHost(MarmottaStartupService.java:244)
+	at org.apache.marmotta.platform.core.startup.MarmottaStartupService$Proxy$_$$_WeldClientProxy.startupHost(Unknown Source)
+	at org.apache.marmotta.platform.core.servlet.MarmottaPreStartupFilter.doFilter(MarmottaPreStartupFilter.java:99)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.thetransactioncompany.cors.CORSFilter.doFilter(CORSFilter.java:208)
+	at com.thetransactioncompany.cors.CORSFilter.doFilter(CORSFilter.java:274)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.marmotta.platform.core.servlet.MarmottaOptionsFilter.doFilter(MarmottaOptionsFilter.java:81)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openrdf.sail.SailException: database error while committing transaction
+	at org.apache.marmotta.kiwi.sail.KiWiSailConnection.commitInternal(KiWiSailConnection.java:346)
+	at org.openrdf.sail.helpers.SailConnectionBase.commit(SailConnectionBase.java:424)
+	at org.openrdf.sail.helpers.SailConnectionWrapper.commit(SailConnectionWrapper.java:126)
+	at org.openrdf.sail.helpers.SailConnectionWrapper.commit(SailConnectionWrapper.java:126)
+	at org.apache.marmotta.commons.sesame.transactions.sail.KiWiTransactionalConnection.commit(KiWiTransactionalConnection.java:128)
+	at org.openrdf.sail.helpers.SailConnectionWrapper.commit(SailConnectionWrapper.java:126)
+	at org.openrdf.repository.sail.SailRepositoryConnection.commit(SailRepositoryConnection.java:106)
+	... 41 common frames omitted
+Caused by: org.postgresql.util.PSQLException: Server versions prior to 8.0 do not support savepoints.
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.setSavepoint(AbstractJdbc3Connection.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.jdbc.pool.ProxyConnection.invoke(ProxyConnection.java:126)
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:109)
+	at org.apache.tomcat.jdbc.pool.interceptor.AbstractCreateStatementInterceptor.invoke(AbstractCreateStatementInterceptor.java:71)
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:109)
+	at org.apache.tomcat.jdbc.pool.interceptor.ConnectionState.invoke(ConnectionState.java:153)
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:109)
+	at org.apache.tomcat.jdbc.pool.TrapException.invoke(TrapException.java:41)
+	at org.apache.tomcat.jdbc.pool.JdbcInterceptor.invoke(JdbcInterceptor.java:109)
+	at org.apache.tomcat.jdbc.pool.DisposableConnectionFacade.invoke(DisposableConnectionFacade.java:80)
+	at com.sun.proxy.$Proxy104.setSavepoint(Unknown Source)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2501)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection.flushBatch(KiWiConnection.java:2370)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$15.run(KiWiConnection.java:2250)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$15.run(KiWiConnection.java:2246)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2504)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection$RetryExecution.execute(KiWiConnection.java:2523)
+	at org.apache.marmotta.kiwi.persistence.KiWiConnection.commit(KiWiConnection.java:2246)
+	at org.apache.marmotta.kiwi.sail.KiWiSailConnection.commitInternal(KiWiSailConnection.java:344)
+	... 47 common frames omitted
+
+
+
+
+
+
+
+
+

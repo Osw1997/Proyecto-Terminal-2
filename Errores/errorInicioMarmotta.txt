@@ -1,0 +1,1018 @@
+Class
+    PSQLException
+Found usages  (494 usages found)
+    Catch clause parameter declaration  (1 usage found)
+        Maven: org.postgresql:postgresql:9.3-1100-jdbc4  (1 usage found)
+            org.postgresql  (1 usage found)
+                Driver  (1 usage found)
+                    connect(String, Properties)  (1 usage found)
+                        286 catch (PSQLException ex1)
+    Field declaration  (1 usage found)
+        Maven: org.postgresql:postgresql:9.3-1100-jdbc4  (1 usage found)
+            org.postgresql.ssl.jdbc4  (1 usage found)
+                LazyKeyManager  (1 usage found)
+                    50 private PSQLException error = null;
+    Local variable declaration  (1 usage found)
+        Maven: org.postgresql:postgresql:9.3-1100-jdbc4  (1 usage found)
+            org.postgresql.ds.jdbc23  (1 usage found)
+                AbstractJdbc23PooledConnection  (1 usage found)
+                    getConnection()  (1 usage found)
+                        112 PSQLException sqlException = new PSQLException(GT.tr("This PooledConnection has already been closed."),
+    Method throws list  (28 usages found)
+        Maven: org.postgresql:postgresql:9.3-1100-jdbc4  (28 usages found)
+            org.postgresql.core  (1 usage found)
+                Oid  (1 usage found)
+                    valueOf(String)  (1 usage found)
+                        97 public static int valueOf(String oid) throws PSQLException {
+            org.postgresql.core.types  (10 usages found)
+                PGBigDecimal  (1 usage found)
+                    castToServerType(BigDecimal, int)  (1 usage found)
+                        33 public static PGType castToServerType( BigDecimal val, int targetType ) throws PSQLException
+                PGBoolean  (1 usage found)
+                    castToServerType(Boolean, int)  (1 usage found)
+                        29 public static PGType castToServerType( Boolean val, int targetType ) throws PSQLException
+                PGByte  (1 usage found)
+                    castToServerType(Byte, int)  (1 usage found)
+                        34 public static PGType castToServerType(Byte val, int targetType) throws PSQLException
+                PGDouble  (1 usage found)
+                    castToServerType(Double, int)  (1 usage found)
+                        31 public static PGType castToServerType( Double val, int targetType ) throws PSQLException
+                PGFloat  (1 usage found)
+                    castToServerType(Float, int)  (1 usage found)
+                        31 public static PGType castToServerType( Float val, int targetType ) throws PSQLException
+                PGInteger  (1 usage found)
+                    castToServerType(Integer, int)  (1 usage found)
+                        31 public static PGType castToServerType( Integer val, int targetType ) throws PSQLException
+                PGLong  (1 usage found)
+                    castToServerType(Long, int)  (1 usage found)
+                        30 public static PGType castToServerType(Long val, int targetType ) throws PSQLException 
+                PGNumber  (1 usage found)
+                    castToServerType(Number, int)  (1 usage found)
+                        29 public static PGType castToServerType( Number val, int targetType ) throws PSQLException
+                PGShort  (1 usage found)
+                    castToServerType(Short, int)  (1 usage found)
+                        29 public static PGType castToServerType( Short val, int targetType ) throws PSQLException
+                PGString  (1 usage found)
+                    castToServerType(String, int)  (1 usage found)
+                        33 public static PGType castToServerType(String val, int targetType) throws PSQLException
+            org.postgresql.core.v3  (4 usages found)
+                CopyOperationImpl  (1 usage found)
+                    handleCommandStatus(String)  (1 usage found)
+                        51 public void handleCommandStatus(String status) throws PSQLException {
+                QueryExecutorImpl  (3 usages found)
+                    lock(Object)  (1 usage found)
+                        64 private void lock(Object obtainer) throws PSQLException {
+                    unlock(Object)  (1 usage found)
+                        76 private void unlock(Object holder) throws PSQLException {
+                    waitOnLock()  (1 usage found)
+                        88 private void waitOnLock() throws PSQLException {
+            org.postgresql.jdbc2  (8 usages found)
+                AbstractJdbc2Connection  (1 usage found)
+                    getOidSet(String)  (1 usage found)
+                        265 private Set<Integer> getOidSet(String oidList) throws PSQLException {
+                AbstractJdbc2ResultSet  (2 usages found)
+                    readDoubleValue(byte[], int, String)  (1 usage found)
+                        3114 String targetType) throws PSQLException {
+                    readLongValue(byte[], int, long, long, String)  (1 usage found)
+                        3154 throws PSQLException {
+                AbstractJdbc2Statement  (1 usage found)
+                    createInternalType(Object, int)  (1 usage found)
+                        1694 private PGType createInternalType( Object x, int targetType ) throws PSQLException
+                TimestampUtils  (4 usages found)
+                    toDateBin(TimeZone, byte[])  (1 usage found)
+                        646 public Date toDateBin(TimeZone tz, byte[] bytes) throws PSQLException {
+                    toTimeBin(TimeZone, byte[])  (1 usage found)
+                        678 public Time toTimeBin(TimeZone tz, byte[] bytes) throws PSQLException {
+                    toTimestampBin(TimeZone, byte[], boolean)  (1 usage found)
+                        724 throws PSQLException {
+                    toBinDate(TimeZone, byte[], Date)  (1 usage found)
+                        905 public void toBinDate(TimeZone tz, byte[] bytes, Date value) throws PSQLException {
+            org.postgresql.jdbc3  (1 usage found)
+                AbstractJdbc3ParameterMetaData  (1 usage found)
+                    checkParamIndex(int)  (1 usage found)
+                        79 private void checkParamIndex(int param) throws PSQLException {
+            org.postgresql.ssl.jdbc4  (4 usages found)
+                AbstractJdbc4MakeSSL  (1 usage found)
+                    convert(PGStream, Properties, Logger)  (1 usage found)
+                        81 public static void convert(PGStream stream, Properties info, Logger logger) throws PSQLException, IOException {
+                LazyKeyManager  (1 usage found)
+                    throwKeyManagerException()  (1 usage found)
+                        73 public void throwKeyManagerException() throws PSQLException
+                LibPQFactory  (2 usages found)
+                    LibPQFactory(Properties)  (1 usage found)
+                        57 public LibPQFactory(Properties info) throws PSQLException {
+                    throwKeyManagerException()  (1 usage found)
+                        181 public void throwKeyManagerException() throws PSQLException
+    New instance creation  (395 usages found)
+        Maven: org.postgresql:postgresql:9.3-1100-jdbc4  (395 usages found)
+            org.postgresql  (6 usages found)
+                Driver  (4 usages found)
+                    connect(String, Properties)  (4 usages found)
+                        241 throw new PSQLException(GT.tr("Error loading default settings from driverconfig.properties"),
+                        254 throw new PSQLException(GT.tr("Properties for the driver contains a non-string value for the key ")+propName,
+                        295 PSQLException
+                        300 throw new PSQLException(GT.tr("Something unusual has occurred to cause the driver to fail. Please report this exception."),
+                Driver.ConnectThread  (2 usages found)
+                    getResult(long)  (2 usages found)
+                        364 throw new PSQLException(GT.tr("Something unusual has occurred to cause the driver to fail. Please report this exception."),
+                        372 throw new PSQLException(GT.tr("Connection attempt timed out."),
+            org.postgresql.copy  (3 usages found)
+                CopyManager  (2 usages found)
+                    copyIn(String)  (1 usage found)
+                        56 throw new PSQLException(GT.tr("Requested CopyIn but got {0}", op.getClass().getName()), PSQLState.WRONG_OBJECT_TYPE, cce);
+                    copyOut(String)  (1 usage found)
+                        67 throw new PSQLException(GT.tr("Requested CopyOut but got {0}", op.getClass().getName()), PSQLState.WRONG_OBJECT_TYPE, cce);
+                PGCopyInputStream  (1 usage found)
+                    readFromCopy()  (1 usage found)
+                        108 throw new PSQLException(GT.tr("Read from copy failed."), PSQLState.CONNECTION_FAILURE);
+            org.postgresql.core  (7 usages found)
+                ConnectionFactory  (1 usage found)
+                    openConnection(HostSpec[], String, String, Properties, Logger)  (1 usage found)
+                        69 throw new PSQLException(GT.tr("A connection could not be made using the requested protocol {0}.", protoName),
+                Oid  (1 usage found)
+                    valueOf(String)  (1 usage found)
+                        113 throw new PSQLException(GT.tr("oid type {0} not known and not a number", oid), PSQLState.INVALID_PARAMETER_VALUE);
+                PGStream  (1 usage found)
+                    ReceiveEOF()  (1 usage found)
+                        530 throw new PSQLException(GT.tr("Expected an EOF from server, got: {0}", new Integer(c)), PSQLState.COMMUNICATION_ERROR);
+                SetupQueryRunner  (1 usage found)
+                    run(ProtocolConnection, String, boolean)  (1 usage found)
+                        86 throw new PSQLException(GT.tr("An unexpected result was returned by a query."), PSQLState.CONNECTION_UNABLE_TO_CONNECT);
+                Utils  (3 usages found)
+                    appendEscapedLiteral(StringBuffer, String, boolean)  (2 usages found)
+                        95 throw new PSQLException(GT.tr("Zero bytes may not occur in string parameters."), PSQLState.INVALID_PARAMETER_VALUE);
+                        112 throw new PSQLException(GT.tr("Zero bytes may not occur in string parameters."), PSQLState.INVALID_PARAMETER_VALUE);
+                    appendEscapedIdentifier(StringBuffer, String)  (1 usage found)
+                        145 throw new PSQLException(GT.tr("Zero bytes may not occur in identifiers."), PSQLState.INVALID_PARAMETER_VALUE);
+            org.postgresql.core.types  (10 usages found)
+                PGBigDecimal  (1 usage found)
+                    castToServerType(BigDecimal, int)  (1 usage found)
+                        63 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGBoolean  (1 usage found)
+                    castToServerType(Boolean, int)  (1 usage found)
+                        62 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGByte  (1 usage found)
+                    castToServerType(Byte, int)  (1 usage found)
+                        63 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGDouble  (1 usage found)
+                    castToServerType(Double, int)  (1 usage found)
+                        64 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGFloat  (1 usage found)
+                    castToServerType(Float, int)  (1 usage found)
+                        64 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGInteger  (1 usage found)
+                    castToServerType(Integer, int)  (1 usage found)
+                        61 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGLong  (1 usage found)
+                    castToServerType(Long, int)  (1 usage found)
+                        62 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGNumber  (1 usage found)
+                    castToServerType(Number, int)  (1 usage found)
+                        62 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGShort  (1 usage found)
+                    castToServerType(Short, int)  (1 usage found)
+                        58 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+                PGString  (1 usage found)
+                    castToServerType(String, int)  (1 usage found)
+                        73 throw new PSQLException(GT.tr("Cannot convert an instance of {0} to type {1}", new Object[]{val.getClass().getName(),"Types.OTHER"}), PSQLState.INVALID_PARAMETER_TYPE, ex);
+            org.postgresql.core.v2  (39 usages found)
+                ConnectionFactoryImpl  (15 usages found)
+                    openConnectionImpl(HostSpec[], String, String, Properties, Logger)  (4 usages found)
+                        66 throw new PSQLException (GT.tr("Invalid sslmode value: {0}", sslmode), PSQLState.CONNECTION_UNABLE_TO_CONNECT);
+                        134 PSQLException
+                        153 throw new PSQLException (GT.tr("The connection attempt failed."), PSQLState.CONNECTION_UNABLE_TO_CONNECT, ioe);
+                        175 throw new PSQLException (GT.tr("The connection url is invalid."), PSQLState.CONNECTION_UNABLE_TO_CONNECT);
+                    enableSSL(PGStream, boolean, Properties, Logger)  (3 usages found)
+                        198 throw new PSQLException(GT.tr("The server does not support SSL."), PSQLState.CONNECTION_REJECTED);
+                        210 throw new PSQLException(GT.tr("The server does not support SSL."), PSQLState.CONNECTION_REJECTED);
+                        223 throw new PSQLException(GT.tr("An error occurred while setting up the SSL connection."), PSQLState.PROTOCOL_VIOLATION);
+                    doAuthentication(PGStream, String, String, Logger)  (6 usages found)
+                        272 throw new PSQLException(GT.tr("Connection rejected: {0}.", errorMsg), PSQLState.CONNECTION_REJECTED);
+                        290 throw new PSQLException(GT.tr("The server requested password-based authentication, but no password was provided."), PSQLState.CONNECTION_REJECTED);
+                        312 throw new PSQLException(GT.tr("The server requested password-based authentication, but no password was provided."), PSQLState.CONNECTION_REJECTED);
+                        332 throw new PSQLException(GT.tr("The server requested password-based authentication, but no password was provided."), PSQLState.CONNECTION_REJECTED);
+                        356 PSQLException
+                        362 throw new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.PROTOCOL_VIOLATION);
+                    readStartupMessages(PGStream, ProtocolConnectionImpl, Logger)  (2 usages found)
+                        390 throw new PSQLException(GT.tr("Backend start-up failed: {0}.", errorMsg), PSQLState.CONNECTION_UNABLE_TO_CONNECT);
+                        400 throw new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.PROTOCOL_VIOLATION);
+                FastpathParameterList  (4 usages found)
+                    setIntParameter(int, int)  (1 usage found)
+                        55 PSQLException
+                    setBytea(int, byte[], int, int)  (1 usage found)
+                        77 PSQLException
+                    setBytea(int, InputStream, int)  (1 usage found)
+                        84 PSQLException
+                    checkAllParametersSet()  (1 usage found)
+                        142 throw new PSQLException(GT.tr("No value specified for parameter {0}.", new Integer(i + 1)), PSQLState.INVALID_PARAMETER_VALUE);
+                QueryExecutorImpl  (15 usages found)
+                    fastpathCall(int, ParameterList, boolean)  (4 usages found)
+                        72 handleError(new PSQLException(GT.tr("Expected command status BEGIN, got {0}.", status),
+                        78 handleError(new PSQLException(GT.tr("Unexpected command status: {0}.", status),
+                        118 throw new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, ioe);
+                        129 throw new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, ioe);
+                    processNotifies()  (2 usages found)
+                        170 throw new PSQLException(GT.tr("Unknown Response Type {0}.", new Character((char) c)), PSQLState.CONNECTION_FAILURE);
+                        174 throw new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, ioe);
+                    receiveFastpathResult()  (2 usages found)
+                        225 throw new PSQLException(GT.tr("Unknown Response Type {0}.", new Character((char) c)), PSQLState.CONNECTION_FAILURE);
+                        236 throw new PSQLException(GT.tr("Unknown Response Type {0}.", new Character((char) c)), PSQLState.CONNECTION_FAILURE);
+                    execute(V2Query, SimpleParameterList, ResultHandler, int, int)  (2 usages found)
+                        337 handleError(new PSQLException(GT.tr("Expected command status BEGIN, got {0}.", status),
+                        369 handler.handleError(new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, e));
+                    processResults(Query, ResultHandler, int, int)  (2 usages found)
+                        430 handler.handleError(new PSQLException(GT.tr("Ran out of memory retrieving query results."), PSQLState.OUT_OF_MEMORY, oome));
+                        475 handler.handleError(new PSQLException(GT.tr("Ran out of memory retrieving query results."), PSQLState.OUT_OF_MEMORY, oome));
+                    receiveErrorMessage()  (1 usage found)
+                        561 return new PSQLException(errorMsg, PSQLState.UNKNOWN_STATE);
+                    interpretCommandStatus(String, ResultHandler)  (1 usage found)
+                        604 handler.handleError(new PSQLException(GT.tr("Unable to interpret the update count in command completion tag: {0}.", status), PSQLState.CONNECTION_FAILURE));
+                    startCopy(String, boolean)  (1 usage found)
+                        617 throw new PSQLException(GT.tr("Copy not implemented for protocol version 2"), PSQLState.NOT_IMPLEMENTED);
+                SimpleParameterList  (5 usages found)
+                    setLiteralParameter(int, String, int)  (1 usage found)
+                        57 PSQLException
+                    setBytea(int, byte[], int, int)  (1 usage found)
+                        76 PSQLException
+                    setBytea(int, InputStream, int)  (1 usage found)
+                        83 PSQLException
+                    setNull(int, int)  (1 usage found)
+                        90 PSQLException
+                    checkAllParametersSet()  (1 usage found)
+                        155 throw new PSQLException(GT.tr("No value specified for parameter {0}.", new Integer(i + 1)), PSQLState.INVALID_PARAMETER_VALUE);
+            org.postgresql.core.v3  (65 usages found)
+                CompositeParameterList  (1 usage found)
+                    findSubParam(int)  (1 usage found)
+                        35 throw new PSQLException(GT.tr("The column index is out of range: {0}, number of columns: {1}.", new Object[]{new Integer(index), new Integer(total)}), PSQLState.INVALID_PARAMETER_VALUE );
+                ConnectionFactoryImpl  (19 usages found)
+                    openConnectionImpl(HostSpec[], String, String, Properties, Logger)  (4 usages found)
+                        74 throw new PSQLException (GT.tr("Invalid sslmode value: {0}", sslmode), PSQLState.CONNECTION_UNABLE_TO_CONNECT);
+                        207 PSQLException
+                        225 throw new PSQLException (GT.tr("The connection attempt failed."), PSQLState.CONNECTION_UNABLE_TO_CONNECT, ioe);
+                        246 throw new PSQLException (GT.tr("The connection url is invalid."), PSQLState.CONNECTION_UNABLE_TO_CONNECT);
+                    enableSSL(PGStream, boolean, Properties, Logger)  (3 usages found)
+                        295 throw new PSQLException(GT.tr("The server does not support SSL."), PSQLState.CONNECTION_REJECTED);
+                        307 throw new PSQLException(GT.tr("The server does not support SSL."), PSQLState.CONNECTION_REJECTED);
+                        320 throw new PSQLException(GT.tr("An error occurred while setting up the SSL connection."), PSQLState.PROTOCOL_VIOLATION);
+                    doAuthentication(PGStream, String, String, Properties, Logger)  (6 usages found)
+                        398 throw new PSQLException(errorMsg);
+                        419 throw new PSQLException(GT.tr("The server requested password-based authentication, but no password was provided."), PSQLState.CONNECTION_REJECTED);
+                        444 throw new PSQLException(GT.tr("The server requested password-based authentication, but no password was provided."), PSQLState.CONNECTION_REJECTED);
+                        471 throw new PSQLException(GT.tr("The server requested password-based authentication, but no password was provided."), PSQLState.CONNECTION_REJECTED);
+                        504 PSQLException
+                        510 throw new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.PROTOCOL_VIOLATION);
+                    readStartupMessages(PGStream, ProtocolConnectionImpl, Logger)  (6 usages found)
+                        553 throw new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.PROTOCOL_VIOLATION);
+                        572 throw new PSQLException(l_errorMsg);
+                        599 throw new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.PROTOCOL_VIOLATION);
+                        609 throw new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.PROTOCOL_VIOLATION);
+                        618 throw new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.PROTOCOL_VIOLATION);
+                        626 throw new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.PROTOCOL_VIOLATION);
+                CopyOperationImpl  (1 usage found)
+                    handleCommandStatus(String)  (1 usage found)
+                        56 throw new PSQLException(GT.tr("CommandComplete expected COPY but got: " + status), PSQLState.COMMUNICATION_ERROR);
+                QueryExecutorImpl  (41 usages found)
+                    lock(Object)  (1 usage found)
+                        66 throw new PSQLException(GT.tr("Tried to obtain lock while already holding it"), PSQLState.OBJECT_NOT_IN_STATE);
+                    unlock(Object)  (1 usage found)
+                        78 throw new PSQLException(GT.tr("Tried to break lock on database connection"), PSQLState.OBJECT_NOT_IN_STATE);
+                    waitOnLock()  (1 usage found)
+                        93 throw new PSQLException(GT.tr("Interrupted while waiting to obtain lock on database connection"), PSQLState.OBJECT_NOT_IN_STATE, ie);
+                    execute(Query, ParameterList, ResultHandler, int, int, int)  (2 usages found)
+                        275 handler.handleError(new PSQLException(GT.tr("Unable to bind parameter values for statement."), PSQLState.INVALID_PARAMETER_VALUE, se.getIOException()));
+                        281 handler.handleError(new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, e));
+                    execute(Query[], ParameterList[], ResultHandler, int, int, int)  (1 usage found)
+                        411 handler.handleError(new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, e));
+                    sendQueryPreamble(ResultHandler, int)  (1 usage found)
+                        447 handleError(new PSQLException(GT.tr("Expected command status BEGIN, got {0}.", status),
+                    fastpathCall(int, ParameterList, boolean)  (1 usage found)
+                        489 throw new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, ioe);
+                    doSubprotocolBegin()  (3 usages found)
+                        511 handleError(new PSQLException(GT.tr("Expected command status BEGIN, got {0}.", status),
+                        517 handleError(new PSQLException(GT.tr("Unexpected command status: {0}.", status),
+                        555 throw new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, ioe);
+                    processNotifies()  (2 usages found)
+                        631 throw new PSQLException(GT.tr("Unknown Response Type {0}.", new Character((char) c)), PSQLState.CONNECTION_FAILURE);
+                        635 throw new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, ioe);
+                    receiveFastpathResult()  (1 usage found)
+                        689 throw new PSQLException(GT.tr("Unknown Response Type {0}.", new Character((char) c)), PSQLState.CONNECTION_FAILURE);
+                    startCopy(String, boolean)  (1 usage found)
+                        730 throw new PSQLException(GT.tr("Database connection failed when starting copy"), PSQLState.CONNECTION_FAILURE, ioe);
+                    cancelCopy(CopyOperationImpl)  (4 usages found)
+                        761 throw new PSQLException(GT.tr("Tried to cancel an inactive copy operation"), PSQLState.OBJECT_NOT_IN_STATE);
+                        798 throw new PSQLException(GT.tr("Database connection failed when canceling copy operation"), PSQLState.CONNECTION_FAILURE, ioe);
+                        803 throw new PSQLException(GT.tr("Missing expected error response to copy cancel request"), PSQLState.COMMUNICATION_ERROR);
+                        805 throw new PSQLException(GT.tr("Got {0} error responses to single copy cancel request", String.valueOf(errors)), PSQLState.COMMUNICATION_ERROR, error);
+                    endCopy(CopyInImpl)  (2 usages found)
+                        818 throw new PSQLException(GT.tr("Tried to end inactive copy"), PSQLState.OBJECT_NOT_IN_STATE);
+                        831 throw new PSQLException(GT.tr("Database connection failed when ending copy"), PSQLState.CONNECTION_FAILURE, ioe);
+                    writeToCopy(CopyInImpl, byte[], int, int)  (2 usages found)
+                        846 throw new PSQLException(GT.tr("Tried to write to an inactive copy operation"), PSQLState.OBJECT_NOT_IN_STATE);
+                        858 throw new PSQLException(GT.tr("Database connection failed when writing to copy"), PSQLState.CONNECTION_FAILURE, ioe);
+                    flushCopy(CopyInImpl)  (2 usages found)
+                        864 throw new PSQLException(GT.tr("Tried to write to an inactive copy operation"), PSQLState.OBJECT_NOT_IN_STATE);
+                        870 throw new PSQLException(GT.tr("Database connection failed when writing to copy"), PSQLState.CONNECTION_FAILURE, ioe);
+                    readFromCopy(CopyOutImpl)  (2 usages found)
+                        882 throw new PSQLException(GT.tr("Tried to read from inactive copy"), PSQLState.OBJECT_NOT_IN_STATE);
+                        887 throw new PSQLException(GT.tr("Database connection failed when reading from copy"), PSQLState.CONNECTION_FAILURE, ioe);
+                    processCopyResults(CopyOperationImpl, boolean)  (6 usages found)
+                        955 throw new PSQLException(GT.tr("Received CommandComplete ''{0}'' without an active copy operation", status), PSQLState.OBJECT_NOT_IN_STATE);
+                        979 error = new PSQLException(GT.tr("Got CopyInResponse from server during an active {0}", op.getClass().getName()), PSQLState.OBJECT_NOT_IN_STATE);
+                        992 error = new PSQLException(GT.tr("Got CopyOutResponse from server during an active {0}", op.getClass().getName()), PSQLState.OBJECT_NOT_IN_STATE);
+                        1007 error = new PSQLException(GT.tr("Got CopyData without an active copy operation"), PSQLState.OBJECT_NOT_IN_STATE);
+                        1009 error = new PSQLException(GT.tr("Unexpected copydata from server for {0}",
+                        1027 error = new PSQLException("Got CopyDone while not copying from server", PSQLState.OBJECT_NOT_IN_STATE);
+                    processResults(ResultHandler, int)  (5 usages found)
+                        1861 handler.handleError(new PSQLException(GT.tr("Ran out of memory retrieving query results."), PSQLState.OUT_OF_MEMORY, oome));
+                        1929 PSQLException
+                        1936 PSQLException
+                        1949 PSQLException
+                        2019 handler.handleError(new PSQLException(GT.tr("The driver currently does not support COPY operations."), PSQLState.NOT_IMPLEMENTED));
+                    fetch(ResultCursor, ResultHandler, int)  (1 usage found)
+                        2098 handler.handleError(new PSQLException(GT.tr("An I/O error occurred while sending to the backend."), PSQLState.CONNECTION_FAILURE, e));
+                    receiveErrorResponse()  (1 usage found)
+                        2161 return new PSQLException(errorMsg);
+                    interpretCommandStatus(String, ResultHandler)  (1 usage found)
+                        2210 handler.handleError(new PSQLException(GT.tr("Unable to interpret the update count in command completion tag: {0}.", status), PSQLState.CONNECTION_FAILURE));
+                SimpleParameterList  (3 usages found)
+                    registerOutParameter(int, int)  (1 usage found)
+                        49 PSQLException
+                    bind(int, Object, int, int)  (1 usage found)
+                        56 PSQLException
+                    checkAllParametersSet()  (1 usage found)
+                        216 throw new PSQLException(GT.tr("No value specified for parameter {0}.", new Integer(i + 1)), PSQLState.INVALID_PARAMETER_VALUE);
+            org.postgresql.ds.jdbc23  (5 usages found)
+                AbstractJdbc23PooledConnection  (1 usage found)
+                    getConnection()  (1 usage found)
+                        112 PSQLException sqlException = new PSQLException(GT.tr("This PooledConnection has already been closed."),
+                AbstractJdbc23PooledConnection.ConnectionHandler  (1 usage found)
+                    invoke(Object, Method, Object[])  (1 usage found)
+                        295 PSQLException
+                AbstractJdbc23PooledConnection.StatementHandler  (1 usage found)
+                    invoke(Object, Method, Object[])  (1 usage found)
+                        442 throw new PSQLException(GT.tr("Statement has been closed."),
+                AbstractJdbc23PoolingDataSource  (2 usages found)
+                    initialize()  (1 usage found)
+                        291 throw new PSQLException(GT.tr("Failed to setup DataSource."),
+                    getPooledConnection()  (1 usage found)
+                        414 throw new PSQLException(GT.tr("DataSource has been closed."),
+            org.postgresql.fastpath  (3 usages found)
+                Fastpath  (3 usages found)
+                    fastpath(int, boolean, FastpathArg[])  (1 usage found)
+                        81 throw new PSQLException(GT.tr("Fastpath call {0} - No result was returned and we expected an integer.", new Integer(fnId)),
+                    getInteger(String, FastpathArg[])  (1 usage found)
+                        128 throw new PSQLException(GT.tr("Fastpath call {0} - No result was returned and we expected an integer.", name),
+                    getID(String)  (1 usage found)
+                        237 throw new PSQLException(GT.tr("The fastpath function {0} is unknown.", name), PSQLState.UNEXPECTED_ERROR);
+            org.postgresql.geometric  (7 usages found)
+                PGbox  (1 usage found)
+                    setValue(String)  (1 usage found)
+                        83 throw new PSQLException(GT.tr("Conversion to type {0} failed: {1}.", new Object[]{type,value}), PSQLState.DATA_TYPE_MISMATCH);
+                PGcircle  (2 usages found)
+                    setValue(String)  (2 usages found)
+                        82 throw new PSQLException(GT.tr("Conversion to type {0} failed: {1}.", new Object[]{type,s}), PSQLState.DATA_TYPE_MISMATCH);
+                        91 throw new PSQLException(GT.tr("Conversion to type {0} failed: {1}.", new Object[]{type,s}), PSQLState.DATA_TYPE_MISMATCH, e);
+                PGline  (1 usage found)
+                    setValue(String)  (1 usage found)
+                        80 throw new PSQLException(GT.tr("Conversion to type {0} failed: {1}.", new Object[]{type,s}), PSQLState.DATA_TYPE_MISMATCH);
+                PGlseg  (1 usage found)
+                    setValue(String)  (1 usage found)
+                        77 throw new PSQLException(GT.tr("Conversion to type {0} failed: {1}.", new Object[]{type,s}), PSQLState.DATA_TYPE_MISMATCH);
+                PGpath  (1 usage found)
+                    setValue(String)  (1 usage found)
+                        81 throw new PSQLException(GT.tr("Cannot tell if path is open or closed: {0}.", s), PSQLState.DATA_TYPE_MISMATCH);
+                PGpoint  (1 usage found)
+                    setValue(String)  (1 usage found)
+                        85 throw new PSQLException(GT.tr("Conversion to type {0} failed: {1}.", new Object[]{type,s}), PSQLState.DATA_TYPE_MISMATCH, e);
+            org.postgresql.gss  (5 usages found)
+                GssAction  (3 usages found)
+                    run()  (3 usages found)
+                        145 return new PSQLException(l_errorMsg);
+                        158 return new PSQLException(GT.tr("Protocol error.  Session setup failed."), PSQLState.CONNECTION_UNABLE_TO_CONNECT);
+                        168 return new PSQLException(GT.tr("GSS Authentication failed"), PSQLState.CONNECTION_FAILURE, gsse);
+                MakeGSS  (2 usages found)
+                    authenticate(PGStream, String, String, String, String, String, Logger, ...)  (2 usages found)
+                        47 throw new PSQLException(GT.tr("GSS Authentication failed"), PSQLState.CONNECTION_FAILURE, e);
+                        55 throw new PSQLException(GT.tr("GSS Authentication failed"), PSQLState.CONNECTION_FAILURE, (Exception)result);
+            org.postgresql.jdbc2  (186 usages found)
+                AbstractJdbc2Array  (5 usages found)
+                    getArrayImpl(long, int, Map)  (2 usages found)
+                        153 throw new PSQLException(GT.tr("The array index is out of range: {0}", new Long(index)), PSQLState.DATA_ERROR);
+                        168 PSQLException
+                    readBinaryArray(int, int)  (1 usage found)
+                        196 PSQLException
+                    getResultSetImpl(long, int, Map)  (2 usages found)
+                        816 throw new PSQLException(GT.tr("The array index is out of range: {0}", new Long(index)), PSQLState.DATA_ERROR);
+                        833 PSQLException
+                AbstractJdbc2BlobClob  (6 usages found)
+                    truncate(long)  (3 usages found)
+                        73 throw new PSQLException(GT.tr("Truncation of large objects is only implemented in 8.3 and later servers."), PSQLState.NOT_IMPLEMENTED);
+                        77 throw new PSQLException(GT.tr("Cannot truncate LOB to a negative length."), PSQLState.INVALID_PARAMETER_VALUE);
+                        81 throw new PSQLException(GT.tr("PostgreSQL LOBs can only index to: {0}", new Integer(Integer.MAX_VALUE)), PSQLState.INVALID_PARAMETER_VALUE);
+                    assertPosition(long, long)  (2 usages found)
+                        231 throw new PSQLException(GT.tr("LOB positioning offsets start at 1."), PSQLState.INVALID_PARAMETER_VALUE);
+                        235 throw new PSQLException(GT.tr("PostgreSQL LOBs can only index to: {0}", new Integer(Integer.MAX_VALUE)), PSQLState.INVALID_PARAMETER_VALUE);
+                    checkFreed()  (1 usage found)
+                        246 throw new PSQLException(GT.tr("free() was called on this LOB previously"), PSQLState.OBJECT_NOT_IN_STATE);
+                AbstractJdbc2Connection  (14 usages found)
+                    AbstractJdbc2Connection(HostSpec[], String, String, Properties, String)  (2 usages found)
+                        231 throw new PSQLException(GT.tr("Unsupported value for stringtype parameter: {0}", stringType),
+                        251 throw new PSQLException(GT.tr("unknownLength parameter value must be an integer"), PSQLState.INVALID_PARAMETER_VALUE, nfe);
+                    execSQLQuery(String, int, int)  (1 usage found)
+                        359 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                    execSQLUpdate(String)  (1 usage found)
+                        373 throw new PSQLException(GT.tr("A result was returned when none was expected."),
+                    getObject(String, String, byte[])  (2 usages found)
+                        525 throw new PSQLException(GT.tr("Custom type maps are not supported."), PSQLState.NOT_IMPLEMENTED);
+                        573 throw new PSQLException(GT.tr("Failed to create object for: {0}.", type), PSQLState.CONNECTION_FAILURE, ex);
+                    initObjectTypes(Properties)  (1 usage found)
+                        635 throw new PSQLException(GT.tr("Unable to load the class {0} responsible for the datatype {1}", new Object[] { className, typeName }),
+                    setReadOnly(boolean)  (1 usage found)
+                        731 throw new PSQLException(GT.tr("Cannot change transaction read-only property in the middle of a transaction."),
+                    commit()  (1 usage found)
+                        824 throw new PSQLException(GT.tr("Cannot commit when autoCommit is enabled."),
+                    checkClosed()  (1 usage found)
+                        833 throw new PSQLException(GT.tr("This connection has been closed."),
+                    rollback()  (1 usage found)
+                        853 throw new PSQLException(GT.tr("Cannot rollback when autoCommit is enabled."),
+                    setTransactionIsolation(int)  (2 usages found)
+                        940 throw new PSQLException(GT.tr("Cannot change transaction isolation level in the middle of a transaction."),
+                        945 throw new PSQLException(GT.tr("Transaction isolation level {0} not supported.", new Integer(level)), PSQLState.NOT_IMPLEMENTED);
+                    encodeString(String)  (1 usage found)
+                        1121 throw new PSQLException(GT.tr("Unable to translate data into the desired encoding."), PSQLState.DATA_ERROR, ioe);
+                AbstractJdbc2DatabaseMetaData  (2 usages found)
+                    getMaxIndexKeys()  (1 usage found)
+                        63 throw new PSQLException(GT.tr("Unable to determine a value for MaxIndexKeys due to missing system catalog data."), PSQLState.UNEXPECTED_ERROR);
+                    getMaxNameLength()  (1 usage found)
+                        86 throw new PSQLException(GT.tr("Unable to find name datatype in the system catalogs."), PSQLState.UNEXPECTED_ERROR);
+                AbstractJdbc2ResultSet  (51 usages found)
+                    checkScrollable()  (1 usage found)
+                        235 throw new PSQLException(GT.tr("Operation requires a scrollable ResultSet, but this ResultSet is FORWARD_ONLY."),
+                    getCharacterStream(int)  (1 usage found)
+                        416 throw new PSQLException(GT.tr("Unexpected error while decoding character data from a large object."), PSQLState.UNEXPECTED_ERROR, ioe);
+                    getDate(int, Calendar)  (1 usage found)
+                        462 throw new PSQLException (GT.tr("Cannot convert the column of type {0} to requested type {1}.",
+                    getTime(int, Calendar)  (1 usage found)
+                        491 throw new PSQLException (GT.tr("Cannot convert the column of type {0} to requested type {1}.",
+                    getTimestamp(int, Calendar)  (1 usage found)
+                        525 throw new PSQLException (GT.tr("Cannot convert the column of type {0} to requested type {1}.",
+                    previous()  (1 usage found)
+                        744 throw new PSQLException(GT.tr("Can''t use relative move methods while on the insert row."),
+                    relative(int)  (1 usage found)
+                        768 throw new PSQLException(GT.tr("Can''t use relative move methods while on the insert row."),
+                    setFetchDirection(int)  (1 usage found)
+                        788 throw new PSQLException(GT.tr("Invalid fetch direction constant: {0}.", new Integer(direction)),
+                    cancelRowUpdates()  (1 usage found)
+                        802 throw new PSQLException(GT.tr("Cannot call cancelRowUpdates() when on the insert row."),
+                    deleteRow()  (4 usages found)
+                        822 throw new PSQLException(GT.tr("Cannot call deleteRow() when on the insert row."),
+                        828 throw new PSQLException(GT.tr("Currently positioned before the start of the ResultSet.  You cannot call deleteRow() here."),
+                        833 throw new PSQLException(GT.tr("Currently positioned after the end of the ResultSet.  You cannot call deleteRow() here."),
+                        838 throw new PSQLException(GT.tr("There are no rows in this ResultSet."),
+                    insertRow()  (2 usages found)
+                        885 throw new PSQLException(GT.tr("Not on the insert row."), PSQLState.INVALID_CURSOR_STATE);
+                        889 throw new PSQLException(GT.tr("You must specify at least one column value to insert a row."),
+                    updateAsciiStream(int, InputStream, int)  (2 usages found)
+                        1074 throw new PSQLException(GT.tr("The JVM claims not to support the encoding: {0}","ASCII"), PSQLState.UNEXPECTED_ERROR, uee);
+                        1078 throw new PSQLException(GT.tr("Provided InputStream failed."), null, ie);
+                    updateBinaryStream(int, InputStream, int)  (1 usage found)
+                        1121 throw new PSQLException(GT.tr("Provided InputStream failed."), null, ie);
+                    updateCharacterStream(int, Reader, int)  (1 usage found)
+                        1191 throw new PSQLException(GT.tr("Provided Reader failed."), null, ie);
+                    refreshRow()  (1 usage found)
+                        1259 throw new PSQLException(GT.tr("Can''t refresh the insert row."),
+                    updateRow()  (2 usages found)
+                        1327 throw new PSQLException(GT.tr("Cannot call updateRow() when on the insert row."),
+                        1333 throw new PSQLException(GT.tr("Cannot update the ResultSet because it is either before the start or after the end of the results."),
+                    isUpdateable()  (2 usages found)
+                        1582 throw new PSQLException(GT.tr("ResultSets with concurrency CONCUR_READ_ONLY cannot be updated."),
+                        1650 throw new PSQLException(GT.tr("No primary key found for table {0}.", tableName),
+                    updateRowBuffer()  (1 usage found)
+                        1805 throw new PSQLException(GT.tr("The JVM claims not to support the encoding: {0}", "ISO-8859-1"), PSQLState.UNEXPECTED_ERROR, e);
+                    setFetchSize(int)  (1 usage found)
+                        1876 throw new PSQLException(GT.tr("Fetch size must be a value greater to or equal to 0."),
+                    next()  (1 usage found)
+                        1892 throw new PSQLException(GT.tr("Can''t use relative move methods while on the insert row."),
+                    getString(int)  (1 usage found)
+                        1982 PSQLException
+                    getByte(int)  (2 usages found)
+                        2044 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"byte",s}),
+                        2051 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"byte",s}),
+                    getShort(int)  (2 usages found)
+                        2098 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"short",s}),
+                        2106 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"short",s}),
+                    getAsciiStream(int)  (1 usage found)
+                        2494 throw new PSQLException(GT.tr("The JVM claims not to support the encoding: {0}","ASCII"), PSQLState.UNEXPECTED_ERROR, l_uee);
+                    getUnicodeStream(int)  (1 usage found)
+                        2524 throw new PSQLException(GT.tr("The JVM claims not to support the encoding: {0}","UTF-8"), PSQLState.UNEXPECTED_ERROR, l_uee);
+                    findColumn(String)  (1 usage found)
+                        2727 throw new PSQLException (GT.tr("The column name {0} was not found in this ResultSet.", columnName),
+                    checkUpdateable()  (1 usage found)
+                        2827 PSQLException
+                    checkClosed()  (1 usage found)
+                        2839 throw new PSQLException(GT.tr("This ResultSet is closed."), PSQLState.OBJECT_NOT_IN_STATE);
+                    checkColumnIndex(int)  (1 usage found)
+                        2845 PSQLException
+                    checkResultSet(int)  (1 usage found)
+                        2860 throw new PSQLException(GT.tr("ResultSet not positioned properly, perhaps you need to call next."),
+                    toInt(String)  (2 usages found)
+                        2926 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"int",s}),
+                        2934 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"int",s}),
+                    toLong(String)  (2 usages found)
+                        2964 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"long",s}),
+                        2971 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"long",s}),
+                    toBigDecimal(String, int)  (2 usages found)
+                        2991 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"BigDecimal",s}),
+                        3002 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"BigDecimal",s}),
+                    toFloat(String)  (1 usage found)
+                        3020 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"float",s}),
+                    toDouble(String)  (1 usage found)
+                        3038 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{"double",s}),
+                    readDoubleValue(byte[], int, String)  (1 usage found)
+                        3129 throw new PSQLException (GT.tr("Cannot convert the column of type {0} to requested type {1}.",
+                    readLongValue(byte[], int, long, long, String)  (2 usages found)
+                        3174 throw new PSQLException (GT.tr("Cannot convert the column of type {0} to requested type {1}.",
+                        3179 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{targetType, new Long(val)}),
+                    updateValue(int, Object)  (1 usage found)
+                        3190 throw new PSQLException(GT.tr("Cannot update the ResultSet because it is either before the start or after the end of the results."),
+                AbstractJdbc2ResultSet.CursorResultHandler  (1 usage found)
+                    handleCommandStatus(String, int, long)  (1 usage found)
+                        1828 handleError(new PSQLException(GT.tr("Unexpected command status: {0}.", status),
+                AbstractJdbc2ResultSetMetaData  (1 usage found)
+                    getField(int)  (1 usage found)
+                        430 PSQLException
+                AbstractJdbc2Statement  (48 usages found)
+                    executeQuery(String)  (3 usages found)
+                        259 throw new PSQLException(GT.tr("Can''t use query methods that take a query string on a PreparedStatement."),
+                        284 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                        287 throw new PSQLException(GT.tr("Multiple ResultSets were returned by the query."),
+                    executeQuery()  (2 usages found)
+                        303 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                        306 throw new PSQLException(GT.tr("Multiple ResultSets were returned by the query."), PSQLState.TOO_MANY_RESULTS);
+                    executeUpdate(String)  (2 usages found)
+                        323 throw new PSQLException(GT.tr("Can''t use query methods that take a query string on a PreparedStatement."),
+                        336 throw new PSQLException(GT.tr("A result was returned when none was expected."),
+                    executeUpdate()  (1 usage found)
+                        368 throw new PSQLException(GT.tr("A result was returned when none was expected."),
+                    execute(String)  (1 usage found)
+                        392 throw new PSQLException(GT.tr("Can''t use query methods that take a query string on a PreparedStatement."),
+                    executeWithFlags(int)  (4 usages found)
+                        425 throw new PSQLException(GT.tr("A CallableStatement was executed with nothing returned."), PSQLState.NO_DATA);
+                        429 throw new PSQLException(GT.tr("A CallableStatement was executed with nothing returned."), PSQLState.NO_DATA);
+                        437 throw new PSQLException(GT.tr("A CallableStatement was executed with an invalid number of parameters"),PSQLState.SYNTAX_ERROR);
+                        468 throw new PSQLException (GT.tr("A CallableStatement function was executed and the out parameter {0} was of type {1} however type {2} was registered.",
+                    setMaxRows(int)  (1 usage found)
+                        675 throw new PSQLException(GT.tr("Maximum number of rows must be a value grater than or equal to 0."),
+                    setQueryTimeout(int)  (1 usage found)
+                        718 throw new PSQLException(GT.tr("Query timeout must be a value greater than or equals to 0."),
+                    setMaxFieldSize(int)  (1 usage found)
+                        810 throw new PSQLException(GT.tr("The maximum field size must be a value greater than or equal to 0."),
+                    escapeFunction(String, String, boolean)  (1 usage found)
+                        1103 throw new PSQLException(e.getTargetException().getMessage(),
+                    setNull(int, int)  (1 usage found)
+                        1231 throw new PSQLException(GT.tr("Unknown Types value."), PSQLState.INVALID_PARAMETER_TYPE);
+                    setCharacterStreamPost71(int, InputStream, int, String)  (3 usages found)
+                        1508 throw new PSQLException(GT.tr("Invalid stream length {0}.", new Integer(length)),
+                        1539 throw new PSQLException(GT.tr("The JVM claims not to support the {0} encoding.", encoding), PSQLState.UNEXPECTED_ERROR, l_uee);
+                        1543 throw new PSQLException(GT.tr("Provided InputStream failed."), PSQLState.UNEXPECTED_ERROR, l_ioe);
+                    setBinaryStream(int, InputStream, int)  (2 usages found)
+                        1633 throw new PSQLException(GT.tr("Invalid stream length {0}.", new Integer(length)),
+                        1672 throw new PSQLException(GT.tr("Provided InputStream failed."), PSQLState.UNEXPECTED_ERROR, se);
+                    setPGobject(int, PGobject)  (1 usage found)
+                        1714 throw new PSQLException(GT.tr("Unknown type {0}.", typename), PSQLState.INVALID_PARAMETER_TYPE);
+                    setMap(int, Map)  (1 usage found)
+                        1729 throw new PSQLException(GT.tr("No hstore extension installed."), PSQLState.INVALID_PARAMETER_TYPE);
+                    setObject(int, Object, int, int)  (4 usages found)
+                        1854 throw new PSQLException(GT.tr("Cannot cast an instance of {0} to type {1}", new Object[]{in.getClass().getName(),"Types.BLOB"}), PSQLState.INVALID_PARAMETER_TYPE);
+                        1860 throw new PSQLException(GT.tr("Cannot cast an instance of {0} to type {1}", new Object[]{in.getClass().getName(),"Types.CLOB"}), PSQLState.INVALID_PARAMETER_TYPE);
+                        1866 throw new PSQLException(GT.tr("Cannot cast an instance of {0} to type {1}", new Object[]{in.getClass().getName(),"Types.ARRAY"}), PSQLState.INVALID_PARAMETER_TYPE);
+                        1878 throw new PSQLException(GT.tr("Unsupported Types value: {0}", new Integer(targetSqlType)), PSQLState.INVALID_PARAMETER_TYPE);
+                    setObject(int, Object)  (1 usage found)
+                        1936 PSQLException
+                    registerOutParameter(int, int, boolean)  (1 usage found)
+                        1984 throw new PSQLException (GT.tr("This statement does not declare an OUT parameter.  Use '{' ?= call ... '}' to declare one."), PSQLState.STATEMENT_NOT_ALLOWED_IN_FUNCTION_CALL);
+                    wasNull()  (1 usage found)
+                        2034 throw new PSQLException(GT.tr("wasNull cannot be call before fetching a result."), PSQLState.OBJECT_NOT_IN_STATE);
+                    modifyJdbcCall(String)  (1 usage found)
+                        2530 throw new PSQLException (GT.tr("Malformed function or procedure escape syntax at offset {0}.", new Integer(i)),
+                    checkIndex(int, int, int, String)  (1 usage found)
+                        2580 throw new PSQLException(GT.tr("Parameter of type {0} was registered, but call to get{1} (sqltype={2}) was made.",
+                    checkIndex(int, int, String)  (1 usage found)
+                        2594 throw new PSQLException(GT.tr("Parameter of type {0} was registered, but call to get{1} (sqltype={2}) was made.",
+                    checkIndex(int, boolean)  (3 usages found)
+                        2613 throw new PSQLException(GT.tr("A CallableStatement was declared, but no call to registerOutParameter(1, <some type>) was made."), PSQLState.STATEMENT_NOT_ALLOWED_IN_FUNCTION_CALL);
+                        2617 throw new PSQLException(GT.tr("No function outputs were registered."), PSQLState.OBJECT_NOT_IN_STATE);
+                        2620 throw new PSQLException(GT.tr("Results cannot be retrieved from a CallableStatement before it is executed."), PSQLState.NO_DATA);
+                    checkClosed()  (1 usage found)
+                        2653 throw new PSQLException(GT.tr("This statement has been closed."),
+                    addBatch(String)  (1 usage found)
+                        2664 throw new PSQLException(GT.tr("Can''t use query methods that take a query string on a PreparedStatement."),
+                    setFetchDirection(int)  (1 usage found)
+                        2965 throw new PSQLException(GT.tr("Invalid fetch direction constant: {0}.", new Integer(direction)),
+                    setFetchSize(int)  (1 usage found)
+                        2974 throw new PSQLException(GT.tr("Fetch size must be a value greater to or equal to 0."),
+                    setArray(int, Array)  (1 usage found)
+                        3039 throw new PSQLException(GT.tr("Unknown type {0}.", typename), PSQLState.INVALID_PARAMETER_TYPE);
+                    setBlob(int, Blob)  (1 usage found)
+                        3087 throw new PSQLException(GT.tr("Unexpected error writing large object to database."), PSQLState.UNEXPECTED_ERROR, se);
+                    setCharacterStream(int, Reader, int)  (3 usages found)
+                        3117 throw new PSQLException(GT.tr("Invalid stream length {0}.", new Integer(length)),
+                        3146 throw new PSQLException(GT.tr("Provided Reader failed."), PSQLState.UNEXPECTED_ERROR, l_ioe);
+                        3176 throw new PSQLException(GT.tr("Unexpected error writing large object to database."), PSQLState.UNEXPECTED_ERROR, se);
+                    setClob(int, Clob)  (1 usage found)
+                        3216 throw new PSQLException(GT.tr("Unexpected error writing large object to database."), PSQLState.UNEXPECTED_ERROR, se);
+                AbstractJdbc2Statement.BatchResultHandler  (2 usages found)
+                    handleResultRows(Query, Field[], List, ResultCursor)  (1 usage found)
+                        2711 handleError(new PSQLException(GT.tr("A result was returned when none was expected."),
+                    handleCommandStatus(String, int, long)  (1 usage found)
+                        2733 handleError(new PSQLException(GT.tr("Too many update results were returned."),
+                AbstractJdbc2Statement.CallableBatchResultHandler  (1 usage found)
+                    handleCommandStatus(String, int, long)  (1 usage found)
+                        2803 handleError(new PSQLException(GT.tr("Too many update results were returned."),
+                EscapedFunctions  (42 usages found)
+                    sqlceiling(List)  (1 usage found)
+                        145 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","ceiling"),
+                    sqllog(List)  (1 usage found)
+                        157 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","log"),
+                    sqllog10(List)  (1 usage found)
+                        169 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","log10"),
+                    sqlpower(List)  (1 usage found)
+                        181 throw new PSQLException(GT.tr("{0} function takes two and only two arguments.","power"),
+                    sqltruncate(List)  (1 usage found)
+                        193 throw new PSQLException(GT.tr("{0} function takes two and only two arguments.","truncate"),
+                    sqlchar(List)  (1 usage found)
+                        206 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","char"),
+                    sqlinsert(List)  (1 usage found)
+                        230 throw new PSQLException(GT.tr("{0} function takes four and only four argument.","insert"),
+                    sqllcase(List)  (1 usage found)
+                        243 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","lcase"),
+                    sqlleft(List)  (1 usage found)
+                        255 throw new PSQLException(GT.tr("{0} function takes two and only two arguments.","left"),
+                    sqllength(List)  (1 usage found)
+                        267 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","length"),
+                    sqllocate(List)  (1 usage found)
+                        282 throw new PSQLException(GT.tr("{0} function takes two or three arguments.","locate"),
+                    sqlltrim(List)  (1 usage found)
+                        292 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","ltrim"),
+                    sqlright(List)  (1 usage found)
+                        304 throw new PSQLException(GT.tr("{0} function takes two and only two arguments.","right"),
+                    sqlrtrim(List)  (1 usage found)
+                        316 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","rtrim"),
+                    sqlspace(List)  (1 usage found)
+                        328 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","space"),
+                    sqlsubstring(List)  (1 usage found)
+                        342 throw new PSQLException(GT.tr("{0} function takes two or three arguments.","substring"),
+                    sqlucase(List)  (1 usage found)
+                        352 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","ucase"),
+                    sqlcurdate(List)  (1 usage found)
+                        362 throw new PSQLException(GT.tr("{0} function doesn''t take any argument.","curdate"),
+                    sqlcurtime(List)  (1 usage found)
+                        371 throw new PSQLException(GT.tr("{0} function doesn''t take any argument.","curtime"),
+                    sqldayname(List)  (1 usage found)
+                        380 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","dayname"),
+                    sqldayofmonth(List)  (1 usage found)
+                        389 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","dayofmonth"),
+                    sqldayofweek(List)  (1 usage found)
+                        399 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","dayofweek"),
+                    sqldayofyear(List)  (1 usage found)
+                        408 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","dayofyear"),
+                    sqlhour(List)  (1 usage found)
+                        417 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","hour"),
+                    sqlminute(List)  (1 usage found)
+                        426 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","minute"),
+                    sqlmonth(List)  (1 usage found)
+                        435 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","month"),
+                    sqlmonthname(List)  (1 usage found)
+                        444 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","monthname"),
+                    sqlquarter(List)  (1 usage found)
+                        453 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","quarter"),
+                    sqlsecond(List)  (1 usage found)
+                        462 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","second"),
+                    sqlweek(List)  (1 usage found)
+                        471 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","week"),
+                    sqlyear(List)  (1 usage found)
+                        480 throw new PSQLException(GT.tr("{0} function takes one and only one argument.","year"),
+                    sqltimestampadd(List)  (1 usage found)
+                        489 throw new PSQLException(GT.tr("{0} function takes three and only three arguments.","timestampadd"),
+                    constantToInterval(String, String)  (3 usages found)
+                        501 throw new PSQLException(GT.tr("Interval {0} not yet implemented",type),
+                        521 throw new PSQLException(GT.tr("Interval {0} not yet implemented","SQL_TSI_FRAC_SECOND"),
+                        523 else throw new PSQLException(GT.tr("Interval {0} not yet implemented",type),
+                    sqltimestampdiff(List)  (1 usage found)
+                        531 throw new PSQLException(GT.tr("{0} function takes three and only three arguments.","timestampdiff"),
+                    constantToDatePart(String)  (3 usages found)
+                        543 throw new PSQLException(GT.tr("Interval {0} not yet implemented",type),
+                        564 throw new PSQLException(GT.tr("Interval {0} not yet implemented","SQL_TSI_FRAC_SECOND"),
+                        566 else throw new PSQLException(GT.tr("Interval {0} not yet implemented",type),
+                    sqldatabase(List)  (1 usage found)
+                        573 throw new PSQLException(GT.tr("{0} function doesn''t take any argument.","database"),
+                    sqlifnull(List)  (1 usage found)
+                        582 throw new PSQLException(GT.tr("{0} function takes two and only two arguments.","ifnull"),
+                    sqluser(List)  (1 usage found)
+                        591 throw new PSQLException(GT.tr("{0} function doesn''t take any argument.","user"),
+                TimestampUtils  (5 usages found)
+                    loadCalendar(Calendar, String, String)  (1 usage found)
+                        258 throw new PSQLException(GT.tr("Bad value for type {0} : {1}", new Object[]{type,str}), PSQLState.BAD_DATETIME_FORMAT, nfe);
+                    toTime(Calendar, String)  (1 usage found)
+                        360 throw new PSQLException(GT.tr("Infinite value found for timestamp/date. This cannot be represented as time."),
+                    toDateBin(TimeZone, byte[])  (1 usage found)
+                        648 throw new PSQLException(GT.tr("Unsupported binary encoding of {0}.",
+                    toTimeBin(TimeZone, byte[])  (1 usage found)
+                        680 throw new PSQLException(GT.tr("Unsupported binary encoding of {0}.",
+                    toTimestampBin(TimeZone, byte[], boolean)  (1 usage found)
+                        727 throw new PSQLException(GT.tr("Unsupported binary encoding of {0}.",
+                TypeInfoCache  (8 usages found)
+                    addDataType(String, Class)  (1 usage found)
+                        162 throw new PSQLException(GT.tr("The class {0} does not implement org.postgresql.util.PGobject.", klass.toString()), PSQLState.INVALID_PARAMETER_TYPE);
+                    getSQLType(String)  (1 usage found)
+                        220 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                    getPGType(String)  (1 usage found)
+                        285 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                    getPGType(int)  (1 usage found)
+                        323 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                    getArrayDelimiter(int)  (2 usages found)
+                        380 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                        384 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                    getPGArrayElement(int)  (2 usages found)
+                        420 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+                        424 throw new PSQLException(GT.tr("No results were returned by the query."), PSQLState.NO_DATA);
+            org.postgresql.jdbc3  (17 usages found)
+                AbstractJdbc3Connection  (8 usages found)
+                    setHoldability(int)  (1 usage found)
+                        60 throw new PSQLException(GT.tr("Unknown ResultSet holdability setting: {0}.", new Integer(holdability)),
+                    setSavepoint()  (2 usages found)
+                        98 throw new PSQLException(GT.tr("Server versions prior to 8.0 do not support savepoints."), PSQLState.NOT_IMPLEMENTED);
+                        100 throw new PSQLException(GT.tr("Cannot establish a savepoint in auto-commit mode."),
+                    setSavepoint(String)  (2 usages found)
+                        130 throw new PSQLException(GT.tr("Server versions prior to 8.0 do not support savepoints."), PSQLState.NOT_IMPLEMENTED);
+                        132 throw new PSQLException(GT.tr("Cannot establish a savepoint in auto-commit mode."),
+                    rollback(Savepoint)  (1 usage found)
+                        165 throw new PSQLException(GT.tr("Server versions prior to 8.0 do not support savepoints."), PSQLState.NOT_IMPLEMENTED);
+                    releaseSavepoint(Savepoint)  (1 usage found)
+                        187 throw new PSQLException(GT.tr("Server versions prior to 8.0 do not support savepoints."), PSQLState.NOT_IMPLEMENTED);
+                    prepareStatement(String, int[])  (1 usage found)
+                        419 throw new PSQLException(GT.tr("Returning autogenerated keys is not supported."), PSQLState.NOT_IMPLEMENTED);
+                AbstractJdbc3ParameterMetaData  (1 usage found)
+                    checkParamIndex(int)  (1 usage found)
+                        81 PSQLException
+                AbstractJdbc3Statement  (3 usages found)
+                    addReturning(BaseConnection, String, String[], boolean)  (1 usage found)
+                        151 throw new PSQLException(GT.tr("Returning autogenerated keys is only supported for 8.2 and later servers."), PSQLState.NOT_IMPLEMENTED);
+                    executeUpdate(String, int[])  (1 usage found)
+                        199 throw new PSQLException(GT.tr("Returning autogenerated keys by column index is not supported."), PSQLState.NOT_IMPLEMENTED);
+                    execute(String, int[])  (1 usage found)
+                        317 throw new PSQLException(GT.tr("Returning autogenerated keys by column index is not supported."), PSQLState.NOT_IMPLEMENTED);
+                PSQLSavepoint  (5 usages found)
+                    getSavepointId()  (2 usages found)
+                        38 throw new PSQLException(GT.tr("Cannot reference a savepoint after it has been released."),
+                        42 throw new PSQLException(GT.tr("Cannot retrieve the id of a named savepoint."),
+                    getSavepointName()  (2 usages found)
+                        50 throw new PSQLException(GT.tr("Cannot reference a savepoint after it has been released."),
+                        54 throw new PSQLException(GT.tr("Cannot retrieve the name of an unnamed savepoint."),
+                    getPGName()  (1 usage found)
+                        66 throw new PSQLException(GT.tr("Cannot reference a savepoint after it has been released."),
+            org.postgresql.jdbc4  (14 usages found)
+                AbstractJdbc4Connection  (2 usages found)
+                    createArrayOf(String, Object[])  (1 usage found)
+                        83 throw new PSQLException(GT.tr("Unable to find server array type for provided name {0}.", typeName), PSQLState.INVALID_NAME);
+                    isValid(int)  (1 usage found)
+                        121 throw new PSQLException(GT.tr("Invalid timeout ({0}<0).", timeout), PSQLState.INVALID_PARAMETER_VALUE);
+                AbstractJdbc4Statement  (1 usage found)
+                    setBinaryStream(int, InputStream, long)  (1 usage found)
+                        127 throw new PSQLException(GT.tr("Object is too large to send over the protocol."), PSQLState.NUMERIC_CONSTANT_OUT_OF_RANGE);
+                Jdbc4SQLXML  (11 usages found)
+                    getBinaryStream()  (1 usage found)
+                        93 throw new PSQLException("Failed to re-encode xml data.", PSQLState.DATA_ERROR, ioe);
+                    getSource(Class)  (2 usages found)
+                        147 throw new PSQLException(GT.tr("Unable to decode xml data."), PSQLState.DATA_ERROR, e);
+                        150 throw new PSQLException(GT.tr("Unknown XML Source class: {0}", sourceClass), PSQLState.INVALID_PARAMETER_TYPE);
+                    setResult(Class)  (3 usages found)
+                        195 throw new PSQLException(GT.tr("Unable to create SAXResult for SQLXML."), PSQLState.UNEXPECTED_ERROR, te);
+                        209 throw new PSQLException(GT.tr("Unable to create StAXResult for SQLXML"), PSQLState.UNEXPECTED_ERROR, xse);
+                        213 throw new PSQLException(GT.tr("Unknown XML Result class: {0}", resultClass), PSQLState.INVALID_PARAMETER_TYPE);
+                    checkFreed()  (1 usage found)
+                        226 throw new PSQLException(GT.tr("This SQLXML object has already been freed."), PSQLState.OBJECT_NOT_IN_STATE);
+                    ensureInitialized()  (3 usages found)
+                        233 throw new PSQLException(GT.tr("This SQLXML object has not been initialized, so you cannot retrieve data from it."), PSQLState.OBJECT_NOT_IN_STATE);
+                        244 throw new PSQLException(GT.tr("Failed to convert binary xml data to encoding: {0}.", _conn.getEncoding().name()), PSQLState.DATA_ERROR, ioe);
+                        269 throw new PSQLException(GT.tr("Unable to convert DOMResult SQLXML data to a string."), PSQLState.DATA_ERROR, te);
+                    initialize()  (1 usage found)
+                        282 throw new PSQLException(GT.tr("This SQLXML object has already been initialized, so you cannot manipulate it further."), PSQLState.OBJECT_NOT_IN_STATE);
+            org.postgresql.largeobject  (4 usages found)
+                LargeObject  (1 usage found)
+                    close()  (1 usage found)
+                        181 throw new PSQLException("Exception flushing output stream",
+                LargeObjectManager  (3 usages found)
+                    LargeObjectManager(BaseConnection)  (1 usage found)
+                        138 throw new PSQLException(GT.tr("Failed to initialize LargeObject API"), PSQLState.SYSTEM_ERROR);
+                    open(long, int, boolean)  (1 usage found)
+                        257 throw new PSQLException(GT.tr("Large Objects may not be used in auto-commit mode."),
+                    createLO(int)  (1 usage found)
+                        298 throw new PSQLException(GT.tr("Large Objects may not be used in auto-commit mode."),
+            org.postgresql.ssl.jdbc4  (19 usages found)
+                AbstractJdbc4MakeSSL  (5 usages found)
+                    convert(PGStream, Properties, Logger)  (5 usages found)
+                        110 throw new PSQLException(GT.tr("The SSLSocketFactory class provided {0} could not be instantiated.", classname), PSQLState.CONNECTION_FAILURE, e);
+                        125 throw new PSQLException(GT.tr("SSL error: {0}", ex.getMessage()), PSQLState.CONNECTION_FAILURE, ex);
+                        138 throw new PSQLException(GT.tr("The HostnameVerifier class provided {0} could not be instantiated.", sslhostnameverifier), PSQLState.CONNECTION_FAILURE, e);
+                        142 PSQLException
+                        149 throw new PSQLException(GT.tr("The hostname {0} could not be verified.", stream.getHostSpec().getHost()), PSQLState.CONNECTION_FAILURE);
+                LazyKeyManager  (8 usages found)
+                    getCertificateChain(String)  (3 usages found)
+                        121 error = new PSQLException(GT.tr("Could not find a java cryptographic algorithm: X.509 CertificateFactory not available.", null), PSQLState.CONNECTION_FAILURE, ex);
+                        132 error = new PSQLException(GT.tr("Could not open SSL certificate file {0}.", new Object[]{certfile}), PSQLState.CONNECTION_FAILURE, ioex);
+                        137 error = new PSQLException(GT.tr("Loading the SSL certificate {0} into a KeyManager failed.", new Object[]{certfile}), PSQLState.CONNECTION_FAILURE, gsex);
+                    getPrivateKey(String)  (5 usages found)
+                        202 error = new PSQLException(GT.tr("Could not read password for SSL key file, console is not available.", null), PSQLState.CONNECTION_FAILURE, ucex);
+                        204 error = new PSQLException(GT.tr("Could not read password for SSL key file by callbackhandler {0}.", new Object[]{cbh.getClass().getName()}), PSQLState.CONNECTION_FAILURE, ucex); 
+                        223 error = new PSQLException(GT.tr("Could not decrypt SSL key file {0}.", new Object[]{keyfile}), PSQLState.CONNECTION_FAILURE, ikex);
+                        231 error = new PSQLException(GT.tr("Could not read SSL key file {0}.", new Object[]{keyfile}), PSQLState.CONNECTION_FAILURE, ioex);
+                        235 error = new PSQLException(GT.tr("Could not find a java cryptographic algorithm: {0}.", new Object[]{ex.getMessage()}), PSQLState.CONNECTION_FAILURE, ex);
+                LibPQFactory  (6 usages found)
+                    LibPQFactory(Properties)  (6 usages found)
+                        99 throw new PSQLException(GT.tr("The password callback class provided {0} could not be instantiated.", sslpasswordcallback), PSQLState.CONNECTION_FAILURE, e);
+                        133 throw new PSQLException(GT.tr("Could not open SSL root certificate file {0}.", new Object[]{sslrootcertfile}), PSQLState.CONNECTION_FAILURE, ex);
+                        150 throw new PSQLException(GT.tr("Could not read SSL root certificate file {0}.", new Object[]{sslrootcertfile}), PSQLState.CONNECTION_FAILURE, ioex);
+                        153 throw new PSQLException(GT.tr("Loading the SSL root certificate {0} into a TrustManager failed.", new Object[]{sslrootcertfile}), PSQLState.CONNECTION_FAILURE, gsex);
+                        166 throw new PSQLException(GT.tr("Could not initialize SSL context.", null), PSQLState.CONNECTION_FAILURE, ex);
+                        173 throw new PSQLException(GT.tr("Could not find a java cryptographic algorithm: {0}.", new Object[]{ex.getMessage()}), PSQLState.CONNECTION_FAILURE, ex);
+            org.postgresql.util  (4 usages found)
+                HStoreConverter  (2 usages found)
+                    fromBytes(byte[], Encoding)  (1 usage found)
+                        34 PSQLException
+                    toBytes(Map, Encoding)  (1 usage found)
+                        61 PSQLException
+                PGInterval  (1 usage found)
+                    setValue(String)  (1 usage found)
+                        164 throw new PSQLException(GT.tr("Conversion of interval failed"), PSQLState.NUMERIC_CONSTANT_OUT_OF_RANGE, e);
+                PGmoney  (1 usage found)
+                    setValue(String)  (1 usage found)
+                        73 throw new PSQLException(GT.tr("Conversion of money failed."), PSQLState.NUMERIC_CONSTANT_OUT_OF_RANGE, e);
+            org.postgresql.xa  (1 usage found)
+                PGXAConnection.ConnectionHandler  (1 usage found)
+                    invoke(Object, Method, Object[])  (1 usage found)
+                        148 throw new PSQLException(GT.tr("Transaction control methods setAutoCommit(true), commit, rollback and setSavePoint not allowed while an XA transaction is active."),
+    Usage in comments  (10 usages found)
+        Maven: org.postgresql:postgresql:9.3-1100-jdbc4  (10 usages found)
+            org.postgresql.core.v3  (2 usages found)
+                QueryExecutorImpl  (2 usages found)
+                    lock(Object)  (1 usage found)
+                        62 * @throws PSQLException when already holding the lock or getting interrupted.
+                    unlock(Object)  (1 usage found)
+                        74 * @throws PSQLException when this thread does not hold the lock
+            org.postgresql.jdbc2  (6 usages found)
+                AbstractJdbc2ResultSet  (2 usages found)
+                    readDoubleValue(byte[], int, String)  (1 usage found)
+                        3111 * @throws PSQLException If the field type is not supported numeric type.
+                    readLongValue(byte[], int, long, long, String)  (1 usage found)
+                        3149 * @throws PSQLException If the field type is not supported numeric type
+                TimestampUtils  (4 usages found)
+                    toDateBin(TimeZone, byte[])  (1 usage found)
+                        644 * @throws PSQLException If binary format could not be parsed.
+                    toTimeBin(TimeZone, byte[])  (1 usage found)
+                        676 * @throws PSQLException If binary format could not be parsed.
+                    toTimestampBin(TimeZone, byte[], boolean)  (1 usage found)
+                        721 * @throws PSQLException If binary format could not be parsed.
+                    toBinDate(TimeZone, byte[], Date)  (1 usage found)
+                        903 * @throws PSQLException If binary format could not be parsed.
+            org.postgresql.ssl.jdbc4  (2 usages found)
+                LazyKeyManager  (1 usage found)
+                    throwKeyManagerException()  (1 usage found)
+                        71 * @throws PSQLException
+                LibPQFactory  (1 usage found)
+                    throwKeyManagerException()  (1 usage found)
+                        179 * @throws PSQLException
+    Usage in import  (58 usages found)
+        Maven: org.postgresql:postgresql:9.3-1100-jdbc4  (58 usages found)
+            org.postgresql  (1 usage found)
+                Driver  (1 usage found)
+                    19 import org.postgresql.util.PSQLException;
+            org.postgresql.copy  (2 usages found)
+                CopyManager  (1 usage found)
+                    25 import org.postgresql.util.PSQLException;
+                PGCopyInputStream  (1 usage found)
+                    16 import org.postgresql.util.PSQLException;
+            org.postgresql.core  (5 usages found)
+                ConnectionFactory  (1 usage found)
+                    15 import org.postgresql.util.PSQLException;
+                Oid  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGStream  (1 usage found)
+                    24 import org.postgresql.util.PSQLException;
+                SetupQueryRunner  (1 usage found)
+                    17 import org.postgresql.util.PSQLException;
+                Utils  (1 usage found)
+                    19 import org.postgresql.util.PSQLException;
+            org.postgresql.core.types  (10 usages found)
+                PGBigDecimal  (1 usage found)
+                    12 import org.postgresql.util.PSQLException;
+                PGBoolean  (1 usage found)
+                    12 import org.postgresql.util.PSQLException;
+                PGByte  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGDouble  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGFloat  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGInteger  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGLong  (1 usage found)
+                    12 import org.postgresql.util.PSQLException;
+                PGNumber  (1 usage found)
+                    12 import org.postgresql.util.PSQLException;
+                PGShort  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGString  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+            org.postgresql.core.v2  (4 usages found)
+                ConnectionFactoryImpl  (1 usage found)
+                    20 import org.postgresql.util.PSQLException;
+                FastpathParameterList  (1 usage found)
+                    17 import org.postgresql.util.PSQLException;
+                QueryExecutorImpl  (1 usage found)
+                    18 import org.postgresql.util.PSQLException;
+                SimpleParameterList  (1 usage found)
+                    18 import org.postgresql.util.PSQLException;
+            org.postgresql.core.v3  (5 usages found)
+                CompositeParameterList  (1 usage found)
+                    12 import org.postgresql.util.PSQLException;
+                ConnectionFactoryImpl  (1 usage found)
+                    19 import org.postgresql.util.PSQLException;
+                CopyOperationImpl  (1 usage found)
+                    14 import org.postgresql.util.PSQLException;
+                QueryExecutorImpl  (1 usage found)
+                    22 import org.postgresql.util.PSQLException;
+                SimpleParameterList  (1 usage found)
+                    17 import org.postgresql.util.PSQLException;
+            org.postgresql.ds.jdbc23  (2 usages found)
+                AbstractJdbc23PooledConnection  (1 usage found)
+                    16 import org.postgresql.util.PSQLException;
+                AbstractJdbc23PoolingDataSource  (1 usage found)
+                    18 import org.postgresql.util.PSQLException;
+            org.postgresql.fastpath  (1 usage found)
+                Fastpath  (1 usage found)
+                    18 import org.postgresql.util.PSQLException;
+            org.postgresql.geometric  (6 usages found)
+                PGbox  (1 usage found)
+                    14 import org.postgresql.util.PSQLException;
+                PGcircle  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGline  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGlseg  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGpath  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+                PGpoint  (1 usage found)
+                    15 import org.postgresql.util.PSQLException;
+            org.postgresql.jdbc2  (9 usages found)
+                AbstractJdbc2Array  (1 usage found)
+                    12 import org.postgresql.util.PSQLException;
+                AbstractJdbc2BlobClob  (1 usage found)
+                    22 import org.postgresql.util.PSQLException;
+                AbstractJdbc2DatabaseMetaData  (1 usage found)
+                    14 import org.postgresql.util.PSQLException;
+                AbstractJdbc2ResultSet  (1 usage found)
+                    35 import org.postgresql.util.PSQLException;
+                AbstractJdbc2ResultSetMetaData  (1 usage found)
+                    12 import org.postgresql.util.PSQLException;
+                AbstractJdbc2Statement  (1 usage found)
+                    30 import org.postgresql.util.PSQLException;
+                EscapedFunctions  (1 usage found)
+                    18 import org.postgresql.util.PSQLException;
+                TimestampUtils  (1 usage found)
+                    22 import org.postgresql.util.PSQLException;
+                TypeInfoCache  (1 usage found)
+                    28 import org.postgresql.util.PSQLException;
+            org.postgresql.jdbc3  (4 usages found)
+                AbstractJdbc3Connection  (1 usage found)
+                    14 import org.postgresql.util.PSQLException;
+                AbstractJdbc3ParameterMetaData  (1 usage found)
+                    15 import org.postgresql.util.PSQLException;
+                AbstractJdbc3Statement  (1 usage found)
+                    15 import org.postgresql.util.PSQLException;
+                PSQLSavepoint  (1 usage found)
+                    13 import org.postgresql.util.PSQLException;
+            org.postgresql.jdbc4  (3 usages found)
+                AbstractJdbc4Connection  (1 usage found)
+                    23 import org.postgresql.util.PSQLException;
+                AbstractJdbc4Statement  (1 usage found)
+                    18 import org.postgresql.util.PSQLException;
+                Jdbc4SQLXML  (1 usage found)
+                    5 import org.postgresql.util.PSQLException;
+            org.postgresql.largeobject  (2 usages found)
+                LargeObject  (1 usage found)
+                    15 import org.postgresql.util.PSQLException;
+                LargeObjectManager  (1 usage found)
+                    16 import org.postgresql.util.PSQLException;
+            org.postgresql.ssl.jdbc4  (3 usages found)
+                AbstractJdbc4MakeSSL  (1 usage found)
+                    22 import org.postgresql.util.PSQLException;
+                LazyKeyManager  (1 usage found)
+                    36 import org.postgresql.util.PSQLException;
+                LibPQFactory  (1 usage found)
+                    37 import org.postgresql.util.PSQLException;
+            org.postgresql.xa  (1 usage found)
+                PGXAConnection  (1 usage found)
+                    15 import org.postgresql.util.PSQLException;
+
