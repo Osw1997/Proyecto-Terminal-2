@@ -1,0 +1,9 @@
+<h1>Error en conexión</h1>
+<% if (!conexionAM && !conexionInternet) { %>
+  <h3>Error: Conexión con Apache Marmotta e Internet no es posible</h3>
+<% } else if (!conexionAM) { %>
+  <h3>Error: Conexión con Apache Marmotta no es posible</h3>
+<% } else if (!conexionInternet) { %>
+  <h3>Error: Conexión a Internet no es posible</h3>
+<% } %>
+<h5>Hable con el administrador del sistema.</h5>

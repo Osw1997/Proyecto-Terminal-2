@@ -1,0 +1,22 @@
+<h1>Dar de baja a usuario</h1>
+<form class="" action="/darBaja" method="post">
+  <div class="">
+    <% if (ok) { %>
+      <div class="success">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <%= msg %>
+      </div>
+    <% } else { %>
+      <% if (msg.length) { %>
+        <div class="alert">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+          <%= msg %>
+        </div>
+      <% } %>
+    <% } %>
+    
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <button type="submit">Dar de baja</button>
+</form>

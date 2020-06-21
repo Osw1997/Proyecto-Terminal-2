@@ -1,0 +1,147 @@
+# Para matar procesos
+lsof -i :8080
+kill -9 <ProcessID>
+
+
+
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+#PREFIX units: <http://eulersharp.sourceforge.net/2003/03swap/units#>
+PREFIX my: <http://example.org/ApplicationSchema#>
+#PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+#PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX geoes: <http://geo.marmotta.es/ontology#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
+
+SELECT ?new ?aWKT ?gWKT (geof:union("POLYGON((-83.6 34.1, -83.2 34.1, -83.2 34.5, -83.6 34.5, -83.6 34.1))", "POLYGON((-83.6 34.1, -83.4 34.1, -83.4 34.3, -83.6 34.3, -83.6 34.1))") as ?dist)
+WHERE {
+  
+  my:A my:hasExactGeometry ?aGeom .
+  ?aGeom geo:asWKT ?aWKT .
+  
+  my:B my:hasExactGeometry ?gGeom .
+  ?gGeom geo:asWKT ?gWKT .
+  
+  #bind(strlen(UCASE(concat("Hola", " pelota"))) as ?new)
+  bind(str(?aWKT) as ?new)
+}
+LIMIT 10
+
+
+
+
+
+# # QUERY QUE SI FUNCIONA
+PREFIX unit: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+prefix geom: <http://geovocab.org/geometry#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+#select ?geom1 ?geoms (geof:distance(?geom1, ?geoms, unit:metre) as ?Dist) {
+select ?geom1 ?geoms {
+	service <http://linkedgeodata.org/sparql> {
+		select * where{
+        	<http://linkedgeodata.org/geometry/node1002993824> geo:asWKT ?geom1_ .
+        	?subj geo:asWKT ?geoms_ .
+          bind(str(?geom1_) as ?geom1)
+          bind(str(?geoms_) as ?geoms)
+      	} limit 100
+	}
+}
+
+
+# Crear nuevo grafo
+#CREATE GRAPH <http://www.example.com/ont#books> ;
+# INSERT DATA { GRAPH <http://www.example.com/ont#books> { <ex:s1> <ex:p1> <ex:o1> #} }
+
+# Consultar y agrupar por grafo
+select * from {
+	graph ?g { ?s ?p ?o } .
+}
+
+# Eliminar grafo
+delete where {
+	graph <http://www.example.com/ont#books> {?s ?p ?o } .
+}
+
+
+
+
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+
+SELECT * WHERE {
+	graph <http://www.example.com/ont#books> {
+		?s ?p ?o .
+      	filter(?p = <http://www.opengis.net/ont/geosparql#asWKT>)
+    	filter(?s != <http://linkedgeodata.org/geometry/node1002993824>)
+    }
+    graph <http://www.example.com/ont#books> {
+    	?sF ?pF ?oF .
+      	filter(?sF = <http://linkedgeodata.org/geometry/node1002993824>)
+    }
+	
+    #bind(geof:sfTouches(?o, ?o) as ?Touche)
+}
+
+
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+prefix ogcgs: <http://www.opengis.net/ont/geosparql#>
+
+insert {
+	graph <http://www.example.com/ont#books> { ?subj geo:asWKT ?geom1 }
+}
+where {
+  service <http://linkedgeodata.org/sparql> {
+    select ?subj ?geom1 {
+      ?subj <http://www.opengis.net/ont/geosparql#asWKT>  ?geom1_ .
+      bind(str(?geom1_) as ?geom1)
+    } limit 1000
+  }
+}
+
+
+
+
+
+
+prefix ogcgs: <http://www.opengis.net/ont/geosparql#>
+select * where {
+  service <http://linkedgeodata.org/sparql> {
+    select * where {
+      ?subj ogcgs:asWKT ?obj_ .
+      bind(str(?obj_) as ?obj)
+    } limit 10
+  }
+}
+
+
+
+
+
+
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX my: <http://example.org/ApplicationSchema#>
+PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>
+
+SELECT ?readyA ?readyAny ?dist ?ver WHERE {
+  
+  	#my:E my:hasExactGeometry ?aGeom .
+  	?any1 my:hasExactGeometry ?aGeom .
+	?aGeom geo:asWKT ?aWKT .
+  	
+  	?any my:hasExactGeometry ?anyGeom .
+    #my:F my:hasExactGeometry ?anyGeom .
+  	?anyGeom geo:asWKT ?anyWKT .
+	
+  	bind(SUBSTR(UCASE(str(?aWKT)), STRLEN("<HTTP://WWW.OPENGIS.NET/DEF/CRS/OGC/1.3/CRS84> ")) as ?readyA)
+    
+    bind(SUBSTR(UCASE(str(?anyWKT)), STRLEN("<HTTP://WWW.OPENGIS.NET/DEF/CRS/OGC/1.3/CRS84> ")) as ?readyAny)
+    
+    bind(geof:sfContains(?readyA, ?readyAny) as ?ver)
+}
+LIMIT 1000
