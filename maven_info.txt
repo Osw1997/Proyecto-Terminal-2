@@ -1,0 +1,12 @@
+export PATH=/usr/share/maven/bin:$PATH
+
+on marmotta/launchers/marmotta-webapp run
+mvn tomcat7:run
+
+PostgreSQL credenciales
+marmotta
+ProyectoTerminal2
+
+Construir modulo maven
+mvn -DskipTests=true clean install
+
