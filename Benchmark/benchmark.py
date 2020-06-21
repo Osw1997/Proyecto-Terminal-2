@@ -44,7 +44,7 @@ def ejecutaConsulta(I, Q, U, H):
 	return T
 
 # Se inicializa el Dataframe que contenga todos los resultados.
-cols = ['TripleStore', 'Consulta', 'Limite', 'Tiempo']
+cols = ['Indice', 'TripleStore', 'Consulta', 'Limite', 'Tiempo']
 df = pd.DataFrame(columns=cols)
 # Se extrae informacion necesaria sobre la cantidad de consultas
 variaciones = consultas.shape[0]
@@ -64,6 +64,7 @@ for ts, urlS, urlU, header in zip(tripleStores, URL_select, URL_update, headers)
 			# Se mete el valor respectivo de la N-aba corrida
 			for i in range(corridas):
 				df = df.append({
+								'Indice': i + 1,
 								'TripleStore': ts,
 								'Consulta': indice,
 								'Limite':limites[variacion],
@@ -73,6 +74,6 @@ for ts, urlS, urlU, header in zip(tripleStores, URL_select, URL_update, headers)
 
 #print(df)
 # Se guarda el Dataframe en excel
-excel = pd.ExcelWriter('ResultadosBenchmarkFinal.xlsx')
+excel = pd.ExcelWriter('ResultadosBenchmarkFinalV2.xlsx')
 df.to_excel(excel, index=False)
 excel.save()
